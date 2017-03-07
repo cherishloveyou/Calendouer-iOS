@@ -8,7 +8,9 @@
 
 import UIKit
 import SnapKit
+import CoreLocation
 
+let locationManager = CLLocationManager()
 
 class CalViewController: UIViewController {
     
@@ -101,11 +103,29 @@ class CalViewController: UIViewController {
     
     var tableView: UITableView = UITableView()
     
+    // Location Manager
+    let locationManager: CLLocationManager = CLLocationManager()
+    var lock = NSLock()
+    var currentLocation: CLLocation = CLLocation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialView()
         addViews()
         settingLayout()
+        setupData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if CLLocationManager.authorizationStatus() == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        } else if CLLocationManager.authorizationStatus() == .denied {
+            
+        } else if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            locationManager.startUpdatingLocation()
+        }
     }
     
     
@@ -118,6 +138,15 @@ class CalViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: CardTableViewCellId, bundle: nil), forCellReuseIdentifier: CardTableViewCellId)
+        
+        // Core Location
+        locationManager.delegate = self
+        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 10000
+        
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     private func addViews() {
@@ -134,6 +163,10 @@ class CalViewController: UIViewController {
         bakView.addSubview(weatherImageView)
         
         view.addSubview(tableView)
+    }
+    
+    private func setupData() {
+        
     }
     
     private func settingLayout() {
@@ -217,5 +250,24 @@ extension CalViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension CalViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        lock.lock()
+        if let currentLocation = locations.last {
+            print("\(currentLocation.coordinate.latitude), \(currentLocation.coordinate.longitude)")
+            let geocoder: CLGeocoder = CLGeocoder()
+            geocoder.reverseGeocodeLocation(currentLocation, completionHandler: { (place, error) in
+                if place != nil {
+                    if let city = place?.last {
+                        self.cityLabel.text = city.locality
+                        print("\(place?.last?.locality)")
+                    }
+                }
+            })
+        }
+        lock.unlock()
     }
 }

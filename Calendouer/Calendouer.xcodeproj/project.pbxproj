@@ -11,6 +11,7 @@
 		D5AF78231E6CF97B006E63DC /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AF781F1E6CF698006E63DC /* Reveal.framework */; };
 		D5AF78271E6D2BC7006E63DC /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78251E6D2BC7006E63DC /* CardTableViewCell.swift */; };
 		D5AF78281E6D2BC7006E63DC /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AF78261E6D2BC7006E63DC /* CardTableViewCell.xib */; };
+		D5AF78581E6E6DF9006E63DC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AF78571E6E6DF9006E63DC /* CoreLocation.framework */; };
 		D5D7068E1E68612800F61871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7068D1E68612800F61871 /* AppDelegate.swift */; };
 		D5D706901E68612800F61871 /* CalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7068F1E68612800F61871 /* CalViewController.swift */; };
 		D5D706931E68612800F61871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D706911E68612800F61871 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		D5AF781F1E6CF698006E63DC /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		D5AF78251E6D2BC7006E63DC /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = App/View/card/CardTableViewCell.swift; sourceTree = "<group>"; };
 		D5AF78261E6D2BC7006E63DC /* CardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardTableViewCell.xib; path = App/View/card/CardTableViewCell.xib; sourceTree = "<group>"; };
+		D5AF782A1E6DAC38006E63DC /* Calendouer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calendouer-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5AF78571E6E6DF9006E63DC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D5D7068A1E68612800F61871 /* Calendouer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendouer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D7068D1E68612800F61871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D7068F1E68612800F61871 /* CalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5AF78581E6E6DF9006E63DC /* CoreLocation.framework in Frameworks */,
 				D5AF78231E6CF97B006E63DC /* Reveal.framework in Frameworks */,
 				2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */,
 			);
@@ -104,6 +108,7 @@
 		B3E5375B9D7F39E38B4D7ADB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5AF78571E6E6DF9006E63DC /* CoreLocation.framework */,
 				C3B2545464D916F8368106AA /* Pods_Calendouer.framework */,
 				D5AF781F1E6CF698006E63DC /* Reveal.framework */,
 			);
@@ -202,6 +207,7 @@
 				D5D706991E68612900F61871 /* Info.plist */,
 				D5D7068D1E68612800F61871 /* AppDelegate.swift */,
 				D5D706BF1E68681000F61871 /* AppDefault.swift */,
+				D5AF782A1E6DAC38006E63DC /* Calendouer-Bridging-Header.h */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -287,7 +293,7 @@
 				TargetAttributes = {
 					D5D706891E68612800F61871 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = C3JGTFM664;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					D5D7069D1E68612900F61871 = {
@@ -563,7 +569,8 @@
 			baseConfigurationReference = D8A08A95730A76A12845FD1F /* Pods-Calendouer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C3JGTFM664;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -589,8 +596,10 @@
 					"-framework",
 					Reveal,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = desgard.Calendouer;
+				PRODUCT_BUNDLE_IDENTIFIER = desgard.calendouer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Calendouer/Calendouer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -600,7 +609,8 @@
 			baseConfigurationReference = DF9CEEE2CC15DEF670F499B5 /* Pods-Calendouer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C3JGTFM664;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -626,8 +636,9 @@
 					"-framework",
 					Reveal,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = desgard.Calendouer;
+				PRODUCT_BUNDLE_IDENTIFIER = desgard.calendouer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Calendouer/Calendouer-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
