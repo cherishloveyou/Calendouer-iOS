@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.4.0)
   - lottie-ios (1.0.4)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -8,6 +9,7 @@ PODS:
   - SwipeableTabBarController (1.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - lottie-ios (~> 1.0.4)
   - SDWebImage (~> 3.8)
   - SnapKit (~> 3.0.2)
@@ -15,12 +17,13 @@ DEPENDENCIES:
   - SwipeableTabBarController (~> 1.0.0)
 
 SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   lottie-ios: 8b2c5ba38105430a72f03ce54be90d8dac950161
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwipeableTabBarController: fb07f89c9c6dec9af60e546a5e75bd86cbb16e78
 
-PODFILE CHECKSUM: 60ad8c3aae0ca7533b61bb2d41cf2c9642936f4d
+PODFILE CHECKSUM: fd16e427280983ca0cfdbf86b36c08912ce2450b
 
 COCOAPODS: 1.2.0

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Calendouer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>17E62D68483488416AE45888BDC36921</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>285984275581458EE7798AB6DA70B166</key>
+		<key>20C82FDE16A4AD509C06FA63552858AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +52,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>550085C2800563B8527640C98A794889</key>
+		<key>4D913DBA39532BB0CA6C561C1D4D32A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>616A17FBBBE226461488DCC758A1BA5D</key>
+		<key>6DD2045D5527DB909041EAEACA612CA8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>634898C4EA5CA692ADF7DDE5F6ED0841</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B57BD9254C09C9FE255B3FA0E4A82C17</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA61992EE1534203CD146297B6815991</key>
 		<dict>
 			<key>primary</key>
 			<true/>

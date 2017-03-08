@@ -10,7 +10,6 @@ import UIKit
 import SnapKit
 import CoreLocation
 
-let locationManager = CLLocationManager()
 
 class CalViewController: UIViewController {
     
@@ -107,6 +106,9 @@ class CalViewController: UIViewController {
     let locationManager: CLLocationManager = CLLocationManager()
     var lock = NSLock()
     var currentLocation: CLLocation = CLLocation()
+    
+    // Process Manger
+    let process: ProcessManager = ProcessManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -253,6 +255,7 @@ extension CalViewController: UITableViewDataSource {
     }
 }
 
+// Core Location
 extension CalViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         lock.lock()
@@ -262,8 +265,18 @@ extension CalViewController: CLLocationManagerDelegate {
             geocoder.reverseGeocodeLocation(currentLocation, completionHandler: { (place, error) in
                 if place != nil {
                     if let city = place?.last {
+                        // 暂时更改 UI 方法
+                        // TODO: 通用方法修改视图回调接口
                         self.cityLabel.text = city.locality
                         print("\(place?.last?.locality)")
+                        
+                        let la = currentLocation.coordinate.latitude
+                        let lo = currentLocation.coordinate.longitude
+                        self.process.GetWeather(Switch: true, latitude: CGFloat(la), longitude: CGFloat(lo), handle: { (weather) in
+                            self.degreeLabel.text = "\(weather.low)°C | \(weather.high)°C"
+                            self.weatherLabel.text = "\(weather.text_day)，\(weather.text_night)"
+                            
+                        })
                     }
                 }
             })
