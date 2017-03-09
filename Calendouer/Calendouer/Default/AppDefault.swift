@@ -54,3 +54,5 @@ let DouCalendarFont: UIFont = UIFont(name: DouCalendarFontName, size: 90)!
 
 // Identity
 let CardTableViewCellId: String = "CardTableViewCell"
+let SwitchSettingTableViewCellId: String = "SwitchSettingTableViewCell"
+let TextSettingTableViewCellId: String = "TextSettingTableViewCell"

@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2545464D916F8368106AA /* Pods_Calendouer.framework */; };
 		D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56289991E7058A00060DDEE /* MovieObject.swift */; };
+		D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */; };
+		D562899F1E711F220060DDEE /* SwitchSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D562899D1E711F220060DDEE /* SwitchSettingTableViewCell.xib */; };
+		D56289A21E712ABF0060DDEE /* TextSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56289A01E712ABF0060DDEE /* TextSettingTableViewCell.swift */; };
+		D56289A31E712ABF0060DDEE /* TextSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D56289A11E712ABF0060DDEE /* TextSettingTableViewCell.xib */; };
+		D56289A61E712AD50060DDEE /* TitleSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56289A41E712AD50060DDEE /* TitleSettingTableViewCell.swift */; };
+		D56289A71E712AD50060DDEE /* TitleSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D56289A51E712AD50060DDEE /* TitleSettingTableViewCell.xib */; };
 		D5AF78231E6CF97B006E63DC /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AF781F1E6CF698006E63DC /* Reveal.framework */; };
 		D5AF78271E6D2BC7006E63DC /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78251E6D2BC7006E63DC /* CardTableViewCell.swift */; };
 		D5AF78281E6D2BC7006E63DC /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AF78261E6D2BC7006E63DC /* CardTableViewCell.xib */; };
 		D5AF78581E6E6DF9006E63DC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AF78571E6E6DF9006E63DC /* CoreLocation.framework */; };
 		D5AF785B1E6E9C6D006E63DC /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF785A1E6E9C6D006E63DC /* AnimatedSwitch.swift */; };
-		D5AF785E1E6E9CC5006E63DC /* SwitchCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF785C1E6E9CC5006E63DC /* SwitchCardTableViewCell.swift */; };
-		D5AF785F1E6E9CC5006E63DC /* SwitchCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AF785D1E6E9CC5006E63DC /* SwitchCardTableViewCell.xib */; };
 		D5AF78611E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework in Resources */ = {isa = PBXBuildFile; fileRef = D5AF78601E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework */; };
 		D5AF78661E6F8134006E63DC /* ProcessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78651E6F8134006E63DC /* ProcessManager.swift */; };
 		D5AF78681E6FD691006E63DC /* WeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78671E6FD691006E63DC /* WeatherObject.swift */; };
@@ -51,14 +55,18 @@
 /* Begin PBXFileReference section */
 		C3B2545464D916F8368106AA /* Pods_Calendouer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendouer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56289991E7058A00060DDEE /* MovieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieObject.swift; path = App/Model/MovieObject.swift; sourceTree = "<group>"; };
+		D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchSettingTableViewCell.swift; path = App/View/setting/SwitchSettingTableViewCell.swift; sourceTree = "<group>"; };
+		D562899D1E711F220060DDEE /* SwitchSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchSettingTableViewCell.xib; path = App/View/setting/SwitchSettingTableViewCell.xib; sourceTree = "<group>"; };
+		D56289A01E712ABF0060DDEE /* TextSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextSettingTableViewCell.swift; path = App/View/setting/TextSettingTableViewCell.swift; sourceTree = "<group>"; };
+		D56289A11E712ABF0060DDEE /* TextSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextSettingTableViewCell.xib; path = App/View/setting/TextSettingTableViewCell.xib; sourceTree = "<group>"; };
+		D56289A41E712AD50060DDEE /* TitleSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleSettingTableViewCell.swift; sourceTree = "<group>"; };
+		D56289A51E712AD50060DDEE /* TitleSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleSettingTableViewCell.xib; sourceTree = "<group>"; };
 		D5AF781F1E6CF698006E63DC /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		D5AF78251E6D2BC7006E63DC /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = App/View/card/CardTableViewCell.swift; sourceTree = "<group>"; };
 		D5AF78261E6D2BC7006E63DC /* CardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardTableViewCell.xib; path = App/View/card/CardTableViewCell.xib; sourceTree = "<group>"; };
 		D5AF782A1E6DAC38006E63DC /* Calendouer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calendouer-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5AF78571E6E6DF9006E63DC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D5AF785A1E6E9C6D006E63DC /* AnimatedSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedSwitch.swift; sourceTree = "<group>"; };
-		D5AF785C1E6E9CC5006E63DC /* SwitchCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchCardTableViewCell.swift; path = App/View/card/SwitchCardTableViewCell.swift; sourceTree = "<group>"; };
-		D5AF785D1E6E9CC5006E63DC /* SwitchCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchCardTableViewCell.xib; path = App/View/card/SwitchCardTableViewCell.xib; sourceTree = "<group>"; };
 		D5AF78601E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThinkpageAPI_v_1_0_1.framework; sourceTree = "<group>"; };
 		D5AF78651E6F8134006E63DC /* ProcessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProcessManager.swift; path = App/Tools/ProcessManager.swift; sourceTree = "<group>"; };
 		D5AF78671E6FD691006E63DC /* WeatherObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherObject.swift; path = App/Model/WeatherObject.swift; sourceTree = "<group>"; };
@@ -133,6 +141,12 @@
 		D562899B1E70E06F0060DDEE /* setting */ = {
 			isa = PBXGroup;
 			children = (
+				D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */,
+				D562899D1E711F220060DDEE /* SwitchSettingTableViewCell.xib */,
+				D56289A01E712ABF0060DDEE /* TextSettingTableViewCell.swift */,
+				D56289A11E712ABF0060DDEE /* TextSettingTableViewCell.xib */,
+				D56289A41E712AD50060DDEE /* TitleSettingTableViewCell.swift */,
+				D56289A51E712AD50060DDEE /* TitleSettingTableViewCell.xib */,
 			);
 			name = setting;
 			sourceTree = "<group>";
@@ -142,8 +156,6 @@
 			children = (
 				D5AF78251E6D2BC7006E63DC /* CardTableViewCell.swift */,
 				D5AF78261E6D2BC7006E63DC /* CardTableViewCell.xib */,
-				D5AF785C1E6E9CC5006E63DC /* SwitchCardTableViewCell.swift */,
-				D5AF785D1E6E9CC5006E63DC /* SwitchCardTableViewCell.xib */,
 			);
 			name = card;
 			sourceTree = "<group>";
@@ -373,11 +385,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D706981E68612800F61871 /* LaunchScreen.storyboard in Resources */,
+				D56289A71E712AD50060DDEE /* TitleSettingTableViewCell.xib in Resources */,
+				D562899F1E711F220060DDEE /* SwitchSettingTableViewCell.xib in Resources */,
+				D56289A31E712ABF0060DDEE /* TextSettingTableViewCell.xib in Resources */,
 				D5AF78611E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework in Resources */,
 				D5D706951E68612800F61871 /* Assets.xcassets in Resources */,
 				D5D706931E68612800F61871 /* Main.storyboard in Resources */,
 				D5AF78281E6D2BC7006E63DC /* CardTableViewCell.xib in Resources */,
-				D5AF785F1E6E9CC5006E63DC /* SwitchCardTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,14 +467,16 @@
 				D5AF78661E6F8134006E63DC /* ProcessManager.swift in Sources */,
 				D5AF785B1E6E9C6D006E63DC /* AnimatedSwitch.swift in Sources */,
 				D5D706C61E6CEF0600F61871 /* SettingViewController.swift in Sources */,
+				D56289A21E712ABF0060DDEE /* TextSettingTableViewCell.swift in Sources */,
 				D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */,
+				D56289A61E712AD50060DDEE /* TitleSettingTableViewCell.swift in Sources */,
 				D5AF78681E6FD691006E63DC /* WeatherObject.swift in Sources */,
 				D5AF78271E6D2BC7006E63DC /* CardTableViewCell.swift in Sources */,
 				D5D706C41E6BAB9000F61871 /* TabViewController.swift in Sources */,
 				D5D706901E68612800F61871 /* CalViewController.swift in Sources */,
+				D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */,
 				D5D706C01E68681000F61871 /* AppDefault.swift in Sources */,
 				D5D7068E1E68612800F61871 /* AppDelegate.swift in Sources */,
-				D5AF785E1E6E9CC5006E63DC /* SwitchCardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

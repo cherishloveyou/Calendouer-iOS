@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import SnapKit
 import CoreLocation
 
@@ -21,7 +22,7 @@ class CalViewController: UIViewController {
     
     let monthLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "何月"
+        _label.text = "--"
         _label.textColor = .white
         _label.textAlignment = .left
         _label.font = DouDefalutFont
@@ -30,7 +31,7 @@ class CalViewController: UIViewController {
     
     let weekdayLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "星期几"
+        _label.text = "---"
         _label.textColor = .white
         _label.textAlignment = .center
         _label.font = DouDefalutFont
@@ -40,7 +41,7 @@ class CalViewController: UIViewController {
     
     let lunarLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "农历今夕何夕"
+        _label.text = "--------"
         _label.textColor = .white
         _label.textAlignment = .right
         _label.font = DouDefalutFont
@@ -50,7 +51,7 @@ class CalViewController: UIViewController {
     
     let dayLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "1"
+        _label.text = "0"
         _label.textColor = .white
         _label.textAlignment = .center
         _label.font = DouCalendarFont
@@ -60,7 +61,7 @@ class CalViewController: UIViewController {
     
     let cityLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "城市"
+        _label.text = "--"
         _label.textColor = .white
         _label.textAlignment = .right
         _label.font = DouDefalutFont
@@ -69,7 +70,7 @@ class CalViewController: UIViewController {
     
     let updateTimeLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "更新：更新日期"
+        _label.text = "更新：--"
         _label.textColor = .white
         _label.textAlignment = .right
         _label.font = DouDefalutFont
@@ -78,7 +79,7 @@ class CalViewController: UIViewController {
     
     let weatherLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "天气，天气"
+        _label.text = "--"
         _label.textColor = .white
         _label.textAlignment = .left
         _label.font = DouDefalutFont
@@ -87,7 +88,7 @@ class CalViewController: UIViewController {
     
     let degreeLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "温度 | 温度"
+        _label.text = "--"
         _label.textColor = .white
         _label.textAlignment = .left
         _label.font = DouDefalutFont
@@ -202,7 +203,7 @@ class CalViewController: UIViewController {
         }
         cityLabel.snp.makeConstraints { (make) in
             make.top.equalTo(dayLabel.snp.bottom)
-            make.right.equalTo(dayLabel.snp.left).offset(-13)
+            make.right.equalTo(view.snp.right).offset(-222)
         }
         updateTimeLabel.snp.makeConstraints { (make) in
             make.right.equalTo(cityLabel.snp.right)
@@ -210,7 +211,7 @@ class CalViewController: UIViewController {
         }
         weatherLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(cityLabel)
-            make.left.equalTo(dayLabel.snp.right).offset(13)
+            make.left.equalTo(view.snp.left).offset(222)
         }
         degreeLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(updateTimeLabel)
@@ -273,6 +274,10 @@ extension CalViewController: CLLocationManagerDelegate {
                         self.process.GetWeather(Switch: true, latitude: CGFloat(la), longitude: CGFloat(lo), handle: { (weather) in
                             self.degreeLabel.text = "\(weather.low)°C | \(weather.high)°C"
                             self.weatherLabel.text = "\(weather.text_day)，\(weather.text_night)"
+                            self.updateTimeLabel.text = "更新：\(weather.last_update)"
+                            if weather.last_update.characters.count == 10 {
+                                self.dayLabel.text = (weather.last_update as NSString).substring(from: 8)
+                            }
                         })
                     }
                 }

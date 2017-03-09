@@ -27,6 +27,7 @@ class WeatherObject: NSObject {
     var wind_direction_degree: String = ""
     var wind_speed: String = ""
     var wind_scale: String = ""
+    var last_update: String = ""
     
     init(Dictionary dic: [String: String]) {
         super.init()
@@ -80,6 +81,11 @@ class WeatherObject: NSObject {
         }
         if let wind_scale = dic["wind_scale"] {
             self.wind_scale = wind_scale
+        }
+        if let last_update = dic["last_update"] {
+            if last_update.characters.count != 0 {
+                self.last_update = (last_update as NSString).substring(to: 10)
+            }
         }
     }
 }

@@ -35,6 +35,7 @@ class ProcessManager: NSObject {
             dataDic["wind_direction_degree"] = json["results"][0]["daily"][0]["wind_direction_degree"].stringValue
             dataDic["wind_speed"]           = json["results"][0]["daily"][0]["wind_speed"].stringValue
             dataDic["wind_scale"]           = json["results"][0]["daily"][0]["wind_scale"].stringValue
+            dataDic["last_update"]          = json["results"][0]["last_update"].stringValue
             
             let weather: WeatherObject = WeatherObject(Dictionary: dataDic)
             handle(weather)
