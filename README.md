@@ -1,11 +1,13 @@
 # Calendouer-iOS
 
+> 豆瓣日历(Calendouer) iOS 端，农历、事情提醒、实时天气、电影推荐。
+
 ![](https://img.shields.io/badge/Swift-3.0-green.svg)
 ![](https://img.shields.io/badge/license-MIT-green.svg)
+[![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 
 ![](https://github.com/Desgard/Calendouer-iOS/blob/master/Calendouer/Calendouer/Assets.xcassets/AppIcon.appiconset/icon-6p.png)
 
-豆瓣日历(Calendouer) iOS 端，农历、事情提醒、实时天气、电影推荐。
 
 ## Features
 

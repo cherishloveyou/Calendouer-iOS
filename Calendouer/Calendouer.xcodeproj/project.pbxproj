@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2545464D916F8368106AA /* Pods_Calendouer.framework */; };
+		D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56289991E7058A00060DDEE /* MovieObject.swift */; };
 		D5AF78231E6CF97B006E63DC /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AF781F1E6CF698006E63DC /* Reveal.framework */; };
 		D5AF78271E6D2BC7006E63DC /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78251E6D2BC7006E63DC /* CardTableViewCell.swift */; };
 		D5AF78281E6D2BC7006E63DC /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AF78261E6D2BC7006E63DC /* CardTableViewCell.xib */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		C3B2545464D916F8368106AA /* Pods_Calendouer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendouer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56289991E7058A00060DDEE /* MovieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieObject.swift; path = App/Model/MovieObject.swift; sourceTree = "<group>"; };
 		D5AF781F1E6CF698006E63DC /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		D5AF78251E6D2BC7006E63DC /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewCell.swift; path = App/View/card/CardTableViewCell.swift; sourceTree = "<group>"; };
 		D5AF78261E6D2BC7006E63DC /* CardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardTableViewCell.xib; path = App/View/card/CardTableViewCell.xib; sourceTree = "<group>"; };
@@ -126,6 +128,13 @@
 				D5AF781F1E6CF698006E63DC /* Reveal.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D562899B1E70E06F0060DDEE /* setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = setting;
 			sourceTree = "<group>";
 		};
 		D5AF78241E6D2B72006E63DC /* card */ = {
@@ -210,6 +219,7 @@
 		D5D706BC1E68679F00F61871 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D562899B1E70E06F0060DDEE /* setting */,
 				D5AF78241E6D2B72006E63DC /* card */,
 				D5D706911E68612800F61871 /* Main.storyboard */,
 			);
@@ -220,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				D5AF78671E6FD691006E63DC /* WeatherObject.swift */,
+				D56289991E7058A00060DDEE /* MovieObject.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -442,6 +453,7 @@
 				D5AF78661E6F8134006E63DC /* ProcessManager.swift in Sources */,
 				D5AF785B1E6E9C6D006E63DC /* AnimatedSwitch.swift in Sources */,
 				D5D706C61E6CEF0600F61871 /* SettingViewController.swift in Sources */,
+				D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */,
 				D5AF78681E6FD691006E63DC /* WeatherObject.swift in Sources */,
 				D5AF78271E6D2BC7006E63DC /* CardTableViewCell.swift in Sources */,
 				D5D706C41E6BAB9000F61871 /* TabViewController.swift in Sources */,

@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TKSwitcherCollection.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>lottie-ios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>20C82FDE16A4AD509C06FA63552858AD</key>
+		<key>228E24222EACBD96A4891767E25AE636</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,27 +57,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D913DBA39532BB0CA6C561C1D4D32A1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6DD2045D5527DB909041EAEACA612CA8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B57BD9254C09C9FE255B3FA0E4A82C17</key>
+		<key>A3E81BECF90963D031D79F3EFCE67D23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CA61992EE1534203CD146297B6815991</key>
+		<key>B0F18EA57FE78DC67BEBFC29DC34AEFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0AA6E4B9EE06E4C87D0492A48D1346D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8094DBE506086415756F16014C61C01</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E949966A019B567E75B82B4375530482</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,6 +7,7 @@ PODS:
   - SnapKit (3.0.2)
   - SwiftyJSON (3.1.4)
   - SwipeableTabBarController (1.0.0)
+  - TKSwitcherCollection (1.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - SnapKit (~> 3.0.2)
   - SwiftyJSON (~> 3.1.4)
   - SwipeableTabBarController (~> 1.0.0)
+  - TKSwitcherCollection
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -23,7 +25,8 @@ SPEC CHECKSUMS:
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwipeableTabBarController: fb07f89c9c6dec9af60e546a5e75bd86cbb16e78
+  TKSwitcherCollection: 939c8a60c47be0db6f0327906456cac855918275
 
-PODFILE CHECKSUM: fd16e427280983ca0cfdbf86b36c08912ce2450b
+PODFILE CHECKSUM: 441a33d9929d710b4c0985d181a406e16b527bd9
 
 COCOAPODS: 1.2.0

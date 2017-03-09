@@ -13,9 +13,7 @@ import SwiftyJSON
 class ProcessManager: NSObject {
     
     public func GetWeather(Switch authority: Bool, latitude: CGFloat, longitude: CGFloat, handle: @escaping (_ weather: WeatherObject) -> Void) {
-        
         let url: String = "https://api.thinkpage.cn/v3/weather/daily.json?key=txyws41isbyqnma5&location=\(latitude):\(longitude)&language=zh-Hans&unit=c"
-        
         Alamofire.request(url).responseJSON { response in
             let json = JSON(response.result.value!)
             var dataDic: [String: String] = [:]
@@ -42,5 +40,7 @@ class ProcessManager: NSObject {
             handle(weather)
         }
     }
+    
+//    public func GetWeather(Switch authority: Bool, handle: )
 }
 

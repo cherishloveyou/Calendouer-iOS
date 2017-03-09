@@ -268,14 +268,11 @@ extension CalViewController: CLLocationManagerDelegate {
                         // 暂时更改 UI 方法
                         // TODO: 通用方法修改视图回调接口
                         self.cityLabel.text = city.locality
-                        print("\(place?.last?.locality)")
-                        
                         let la = currentLocation.coordinate.latitude
                         let lo = currentLocation.coordinate.longitude
                         self.process.GetWeather(Switch: true, latitude: CGFloat(la), longitude: CGFloat(lo), handle: { (weather) in
                             self.degreeLabel.text = "\(weather.low)°C | \(weather.high)°C"
                             self.weatherLabel.text = "\(weather.text_day)，\(weather.text_night)"
-                            
                         })
                     }
                 }

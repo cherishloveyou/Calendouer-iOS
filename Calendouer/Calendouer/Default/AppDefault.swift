@@ -8,6 +8,17 @@
 
 import UIKit
 
+// Log Function
+func printLog<T>(message: T,
+              file: String = #file,
+              method: String = #function,
+              line: Int = #line) {
+    #if DEBUG
+    print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
+    #endif
+}
+
+// Color Quick Function
 func RGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
     return UIColor(red:   r / 255.0,
                    green: g / 255.0,
@@ -15,7 +26,7 @@ func RGBA (r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
                    alpha: a)
 }
 
-
+// Color Quick Constructor
 extension UIColor {
     convenience init(value: UInt, alpha: CGFloat) {
         self.init (
