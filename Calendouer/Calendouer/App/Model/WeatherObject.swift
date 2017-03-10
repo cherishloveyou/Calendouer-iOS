@@ -85,7 +85,7 @@ class WeatherObject: NSObject {
         if let last_update = dic["last_update"] {
             if last_update.characters.count != 0 {
                 self.last_update = (last_update as NSString).substring(to: 10)
-            }
+           }
         }
     }
 }

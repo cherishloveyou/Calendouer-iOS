@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2545464D916F8368106AA /* Pods_Calendouer.framework */; };
+		D5110D241E723B6C006188DB /* DayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D231E723B6C006188DB /* DayObject.swift */; };
 		D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56289991E7058A00060DDEE /* MovieObject.swift */; };
 		D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */; };
 		D562899F1E711F220060DDEE /* SwitchSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D562899D1E711F220060DDEE /* SwitchSettingTableViewCell.xib */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		C3B2545464D916F8368106AA /* Pods_Calendouer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendouer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5110D231E723B6C006188DB /* DayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayObject.swift; path = App/Model/DayObject.swift; sourceTree = "<group>"; };
 		D56289991E7058A00060DDEE /* MovieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieObject.swift; path = App/Model/MovieObject.swift; sourceTree = "<group>"; };
 		D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchSettingTableViewCell.swift; path = App/View/setting/SwitchSettingTableViewCell.swift; sourceTree = "<group>"; };
 		D562899D1E711F220060DDEE /* SwitchSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchSettingTableViewCell.xib; path = App/View/setting/SwitchSettingTableViewCell.xib; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				D5AF78671E6FD691006E63DC /* WeatherObject.swift */,
 				D56289991E7058A00060DDEE /* MovieObject.swift */,
+				D5110D231E723B6C006188DB /* DayObject.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				D5AF78681E6FD691006E63DC /* WeatherObject.swift in Sources */,
 				D5AF78271E6D2BC7006E63DC /* CardTableViewCell.swift in Sources */,
 				D5D706C41E6BAB9000F61871 /* TabViewController.swift in Sources */,
+				D5110D241E723B6C006188DB /* DayObject.swift in Sources */,
 				D5D706901E68612800F61871 /* CalViewController.swift in Sources */,
 				D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */,
 				D5D706C01E68681000F61871 /* AppDefault.swift in Sources */,

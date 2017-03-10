@@ -13,7 +13,7 @@ import SwiftyJSON
 class ProcessManager: NSObject {
     
     public func GetWeather(Switch authority: Bool, latitude: CGFloat, longitude: CGFloat, handle: @escaping (_ weather: WeatherObject) -> Void) {
-        let url: String = "https://api.thinkpage.cn/v3/weather/daily.json?key=txyws41isbyqnma5&location=\(latitude):\(longitude)&language=zh-Hans&unit=c"
+        let url: String = "https://api.thinkpage.cn/v3/weather/daily.json?key=c3zfxqulwe5jzete&location=\(latitude):\(longitude)&language=zh-Hans&unit=c"
         Alamofire.request(url).responseJSON { response in
             let json = JSON(response.result.value!)
             var dataDic: [String: String] = [:]
@@ -42,6 +42,12 @@ class ProcessManager: NSObject {
         }
     }
     
-//    public func GetWeather(Switch authority: Bool, handle: )
+    public func GetDay(Switch authority: Bool, handle: @escaping (_ day: DayObject) -> Void) {
+        let url: String = "https://api.thinkpage.cn/v3/life/chinese_calendar.json?key=c3zfxqulwe5jzete&start=0&days=1"
+        Alamofire.request(url).responseJSON { response in
+            let json = JSON(response.result.value!)
+            print (json)
+        }
+    }
 }
 
