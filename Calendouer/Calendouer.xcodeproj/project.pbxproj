@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2545464D916F8368106AA /* Pods_Calendouer.framework */; };
 		D5110D241E723B6C006188DB /* DayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D231E723B6C006188DB /* DayObject.swift */; };
+		D5110D261E72A633006188DB /* AppStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D251E72A633006188DB /* AppStatic.swift */; };
 		D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56289991E7058A00060DDEE /* MovieObject.swift */; };
 		D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */; };
 		D562899F1E711F220060DDEE /* SwitchSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D562899D1E711F220060DDEE /* SwitchSettingTableViewCell.xib */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		C3B2545464D916F8368106AA /* Pods_Calendouer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendouer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5110D231E723B6C006188DB /* DayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayObject.swift; path = App/Model/DayObject.swift; sourceTree = "<group>"; };
+		D5110D251E72A633006188DB /* AppStatic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatic.swift; sourceTree = "<group>"; };
 		D56289991E7058A00060DDEE /* MovieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieObject.swift; path = App/Model/MovieObject.swift; sourceTree = "<group>"; };
 		D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchSettingTableViewCell.swift; path = App/View/setting/SwitchSettingTableViewCell.swift; sourceTree = "<group>"; };
 		D562899D1E711F220060DDEE /* SwitchSettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchSettingTableViewCell.xib; path = App/View/setting/SwitchSettingTableViewCell.xib; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				D5D706991E68612900F61871 /* Info.plist */,
 				D5D7068D1E68612800F61871 /* AppDelegate.swift */,
 				D5D706BF1E68681000F61871 /* AppDefault.swift */,
+				D5110D251E72A633006188DB /* AppStatic.swift */,
 				D5AF782A1E6DAC38006E63DC /* Calendouer-Bridging-Header.h */,
 			);
 			name = Config;
@@ -469,6 +472,7 @@
 			files = (
 				D5AF78661E6F8134006E63DC /* ProcessManager.swift in Sources */,
 				D5AF785B1E6E9C6D006E63DC /* AnimatedSwitch.swift in Sources */,
+				D5110D261E72A633006188DB /* AppStatic.swift in Sources */,
 				D5D706C61E6CEF0600F61871 /* SettingViewController.swift in Sources */,
 				D56289A21E712ABF0060DDEE /* TextSettingTableViewCell.swift in Sources */,
 				D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */,

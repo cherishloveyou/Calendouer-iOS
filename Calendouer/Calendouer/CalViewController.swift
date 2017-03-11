@@ -169,7 +169,11 @@ class CalViewController: UIViewController {
     }
     
     private func setupData() {
-        
+        self.process.GetDay(Switch: true) { (day) in
+            self.monthLabel.text = day.getMonth()
+            self.weekdayLabel.text = day.getWeekDay()
+            self.lunarLabel.text = day.getLunnerDay()
+        }
     }
     
     private func settingLayout() {

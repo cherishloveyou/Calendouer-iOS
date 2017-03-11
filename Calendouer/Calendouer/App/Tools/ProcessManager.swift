@@ -43,11 +43,8 @@ class ProcessManager: NSObject {
     }
     
     public func GetDay(Switch authority: Bool, handle: @escaping (_ day: DayObject) -> Void) {
-        let url: String = "https://api.thinkpage.cn/v3/life/chinese_calendar.json?key=c3zfxqulwe5jzete&start=0&days=1"
-        Alamofire.request(url).responseJSON { response in
-            let json = JSON(response.result.value!)
-            print (json)
-        }
+        let dayObject: DayObject = DayObject()
+        handle(dayObject)
     }
 }
 
