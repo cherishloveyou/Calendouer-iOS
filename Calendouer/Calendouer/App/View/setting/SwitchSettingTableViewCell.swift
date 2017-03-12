@@ -13,6 +13,7 @@ import TKSwitcherCollection
 class SwitchSettingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
+    
     var onSwitch: TKSmileSwitch = {
         var _switch = TKSmileSwitch(frame: CGRect(x: 0, y: 0, width: 40, height: 20))
         _switch.backgroundColor = UIColor.clear
@@ -36,6 +37,10 @@ class SwitchSettingTableViewCell: UITableViewCell {
             make.height.equalTo(20)
             make.width.equalTo(40)
         }
+    }
+    
+    public func getSwitchStatus() -> Bool {
+        return onSwitch.isOn
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

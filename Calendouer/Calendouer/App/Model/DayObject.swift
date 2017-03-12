@@ -74,7 +74,7 @@ class DayObject: NSObject {
             "星期三", "星期四", "星期五",
             "星期六"
         ]
-        return weekDay[self.week - 7]
+        return weekDay[self.week - 1]
     }
     
     public func getLunnerDay() -> String {

@@ -46,5 +46,9 @@ class ProcessManager: NSObject {
         let dayObject: DayObject = DayObject()
         handle(dayObject)
     }
+    
+    public func GetMovie(Switch authority: Bool, handle: @escaping (_ movie: MovieObject) -> Void) {
+        
+    }
 }
 
