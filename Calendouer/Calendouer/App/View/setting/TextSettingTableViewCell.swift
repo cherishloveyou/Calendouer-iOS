@@ -21,4 +21,9 @@ class TextSettingTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    
+    public func initialCell(title: String, target: String) {
+        self.titleLabel.text = title
+        self.tagetLabel.text = target
+    }
 }

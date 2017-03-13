@@ -10,6 +10,37 @@ import UIKit
 
 class SettingViewController: UIViewController {
     
+    let SettingSectionType: [String: Int] = [
+        "WeatherSection": 0,
+        "MatterSection": 1,
+        "MovieSection": 2,
+        "AboutSection": 3,
+    ]
+    
+    let SettingWeatherCell: [String: Int] = [
+        "IrWeather": 1,
+        "FrequencyWeather": 2,
+    ]
+    
+    let SettingMatterCell: [String: Int] = [
+        "IrMatter": 1,
+        "FrequencyWeather": 2,
+    ]
+    
+    let SettingMovieCell: [String: Int] = [
+        "IrMovie": 1,
+    ]
+    
+    let SettingAboutCell: [String: Int] = [
+        "AuthorAbout": 1,
+        "ConnectAbout": 2,
+        "AppVersionAbout": 3,
+        "ShareAbout": 4,
+    ]
+    
+    let SectionHeaderHeight: CGFloat = 5
+    let SectionFooterHeight: CGFloat = 5
+    
     var tableView: UITableView = UITableView()
 
     override func viewDidLoad() {
@@ -48,31 +79,136 @@ extension SettingViewController: UITableViewDelegate {
         return 42
     }
     
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return self.SettingSectionType.count
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        switch section {
+        case SettingSectionType["WeatherSection"]!:
+            return SettingWeatherCell.count + 1
+        case SettingSectionType["MatterSection"]!:
+            return SettingMatterCell.count + 1
+        case SettingSectionType["MovieSection"]!:
+            return SettingMovieCell.count + 1
+        case SettingSectionType["AboutSection"]!:
+            return SettingAboutCell.count + 1
+        default:
+            return 0
+        }
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5
+        return SectionHeaderHeight
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return SectionFooterHeight
     }
 }
 
 extension SettingViewController: UITableViewDataSource {
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = UITableViewCell()
-        if indexPath.row == 0 {
-            cell = tableView.dequeueReusableCell(withIdentifier: TitleSettingTableViewCellId, for: indexPath) as! TitleSettingTableViewCell
-            cell.selectionStyle = .none
-        } else if indexPath.row == 1 {
-            cell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingTableViewCellId, for: indexPath) as! SwitchSettingTableViewCell
-            cell.selectionStyle = .none
-        } else {
-            cell = tableView.dequeueReusableCell(withIdentifier: TextSettingTableViewCellId, for: indexPath) as! TextSettingTableViewCell
+        
+        switch indexPath.section {
             
+        case SettingSectionType["WeatherSection"]!:
+            if indexPath.row == 0 {
+                let cell: TitleSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TitleSettingTableViewCellId, for: indexPath) as! TitleSettingTableViewCell
+                cell.initialCell(title: "天气")
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingWeatherCell["IrWeather"]! {
+                let cell: SwitchSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingTableViewCellId, for: indexPath) as! SwitchSettingTableViewCell
+                cell.initialCell(title: "天气推送", switchAction: { (status) in
+                    print("天气推送", status)
+                })
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingWeatherCell["FrequencyWeather"]! {
+                let cell: TextSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextSettingTableViewCellId, for: indexPath) as! TextSettingTableViewCell
+                cell.initialCell(title: "推送频率", target: "3小时")
+                cell.selectionStyle = .none
+                return cell
+            }
+            
+        case SettingSectionType["MatterSection"]!:
+            if indexPath.row == 0 {
+                let cell: TitleSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TitleSettingTableViewCellId, for: indexPath) as! TitleSettingTableViewCell
+                cell.initialCell(title: "事情")
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingMatterCell["IrMatter"] {
+                let cell: SwitchSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingTableViewCellId, for: indexPath) as! SwitchSettingTableViewCell
+                cell.initialCell(title: "事情推送", switchAction: { (status) in
+                    
+                })
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingMatterCell["FrequencyWeather"] {
+                let cell: TextSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextSettingTableViewCellId, for: indexPath) as! TextSettingTableViewCell
+                cell.initialCell(title: "更多设置", target: ">")
+                cell.selectionStyle = .none
+                return cell
+            }
+            
+        case SettingSectionType["MovieSection"]!:
+            if indexPath.row == 0 {
+                let cell: TitleSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TitleSettingTableViewCellId, for: indexPath) as! TitleSettingTableViewCell
+                cell.initialCell(title: "电影")
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingMovieCell["IrMovie"]! {
+                let cell: SwitchSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingTableViewCellId, for: indexPath) as! SwitchSettingTableViewCell
+                cell.initialCell(title: "电影推送", switchAction: { (status) in
+                    
+                })
+                cell.selectionStyle = .none
+                return cell
+            }
+            
+        case SettingSectionType["AboutSection"]!:
+            if indexPath.row == 0 {
+                let cell: TitleSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TitleSettingTableViewCellId, for: indexPath) as! TitleSettingTableViewCell
+                cell.initialCell(title: "关于")
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingAboutCell["AuthorAbout"] {
+                let cell: TextSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextSettingTableViewCellId, for: indexPath) as! TextSettingTableViewCell
+                cell.initialCell(title: "关于作者", target: "")
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingAboutCell["ConnectAbout"] {
+                let cell: TextSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextSettingTableViewCellId, for: indexPath) as! TextSettingTableViewCell
+                cell.initialCell(title: "联系作者", target: "")
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingAboutCell["AppVersionAbout"] {
+                let cell: TextSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextSettingTableViewCellId, for: indexPath) as! TextSettingTableViewCell
+                cell.initialCell(title: "版本信息", target: "2.0")
+                cell.selectionStyle = .none
+                return cell
+            }
+            else if indexPath.row == SettingAboutCell["ShareAbout"] {
+                let cell: TextSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextSettingTableViewCellId, for: indexPath) as! TextSettingTableViewCell
+                cell.initialCell(title: "分享日历", target: "")
+                cell.selectionStyle = .none
+                return cell
+            }
+            
+        default:
+            break
         }
-        
-        
+        let cell: TextSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: TextSettingTableViewCellId, for: indexPath) as! TextSettingTableViewCell
         return cell
     }
 }

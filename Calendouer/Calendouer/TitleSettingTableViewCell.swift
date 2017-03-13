@@ -20,4 +20,8 @@ class TitleSettingTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    public func initialCell(title: String) {
+        self.titleLabel.text = title
+    }
+    
 }
