@@ -8,62 +8,51 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>Pods-Calendouer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
+		</dict>
+		<key>Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>SwipeableTabBarController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>TKSwitcherCollection.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
 		</dict>
 		<key>lottie-ios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>228E24222EACBD96A4891767E25AE636</key>
+		<key>13DA8252562C1887291491530E7EFAFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -73,32 +62,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3448DFFAC679B2CCE0463915E912475A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4361ABF8B32A99E209AF36025CAE45CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63B66276F00293E63E0CCF8A3843DD2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D2212EB7225558AC3D2A7EF29372B69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>74BD4DF21F7DB17C70FDD8F58EA65737</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3E81BECF90963D031D79F3EFCE67D23</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B0F18EA57FE78DC67BEBFC29DC34AEFF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0AA6E4B9EE06E4C87D0492A48D1346D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8094DBE506086415756F16014C61C01</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E949966A019B567E75B82B4375530482</key>
+		<key>B0E007E92FBF788AD8A20CC671A39722</key>
 		<dict>
 			<key>primary</key>
 			<true/>

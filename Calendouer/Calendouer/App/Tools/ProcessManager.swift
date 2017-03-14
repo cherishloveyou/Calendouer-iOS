@@ -48,7 +48,10 @@ class ProcessManager: NSObject {
     }
     
     public func GetMovie(Switch authority: Bool, handle: @escaping (_ movie: MovieObject) -> Void) {
-        
+        let top250Url = "https://api.douban.com/v2/movie/top250"
+        Alamofire.request(top250Url).responseJSON { (response) in
+            
+        }
     }
 }
 

@@ -24,7 +24,7 @@ class DayObject: NSObject {
         let date: Date = Date()
         year = calendar.component(.year, from: date)
         month = calendar.component(.month, from: date)
-        year = calendar.component(.day, from: date)
+        day = calendar.component(.day, from: date)
         week = calendar.component(.weekday, from: date)
         
         calendar = Calendar(identifier: .chinese)
@@ -92,5 +92,9 @@ class DayObject: NSObject {
             "廿六", "廿七", "廿八", "廿九", "三十",
         ]
         return "农历\(chineseLunnerMonth[self.luner_month - 1])\(chineseLunnerDay[self.luner_day - 1])"
+    }
+    
+    public func getDay() -> String {
+        return "\(self.day)"
     }
 }

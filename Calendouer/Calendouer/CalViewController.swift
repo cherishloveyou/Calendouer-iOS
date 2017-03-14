@@ -173,6 +173,7 @@ class CalViewController: UIViewController {
             self.monthLabel.text = day.getMonth()
             self.weekdayLabel.text = day.getWeekDay()
             self.lunarLabel.text = day.getLunnerDay()
+            self.dayLabel.text = day.getDay()
         }
     }
     
@@ -279,9 +280,6 @@ extension CalViewController: CLLocationManagerDelegate {
                             self.degreeLabel.text = "\(weather.low)°C | \(weather.high)°C"
                             self.weatherLabel.text = "\(weather.text_day)，\(weather.text_night)"
                             self.updateTimeLabel.text = "更新：\(weather.last_update)"
-                            if weather.last_update.characters.count == 10 {
-                                self.dayLabel.text = (weather.last_update as NSString).substring(from: 8)
-                            }
                         })
                     }
                 }
