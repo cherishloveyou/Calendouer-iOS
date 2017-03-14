@@ -9,12 +9,12 @@
 import UIKit
 
 class MovieObject: NSObject {
-    var rating: [String: NSObject] = [: ]
+    var rating: String = ""
     var reviews_count: Int = 0
     var wish_count: Int = 0
     var douban_site: String = ""
     var year: String = ""
-    var images: [String: String] = [: ]
+    var images: String = ""
     var alt: String = ""
     var id: String = ""
     var mobile_url: String = ""
@@ -24,19 +24,20 @@ class MovieObject: NSObject {
     var seasons_count: Int = 0
     var schedule_url: String = ""
     var episodes_count: Int = 0
-    var countries: [String] = []
-    var genres: [String] = []
+    var countries: String = ""
+    var genres: String = ""
     var collect_count: Int = 0
     var original_title: String = ""
     var summary: String = ""
     var subtype: String = ""
     var comments_count: Int = 0
     var ratings_count: Int = 0
-    var aka: [String] = []
+    var aka: String = ""
+    var alt_title: String = ""
     
-    init(Dictionary dic: [String: NSObject]) {
+    init(Dictionary dic: [String: Any]) {
         if let rating = dic["rating"] {
-            self.rating = rating as! [String : NSObject]
+            self.rating = rating as! String
         }
         if let reviews_count = dic["reviews_count"] {
             self.reviews_count = reviews_count as! Int
@@ -51,7 +52,7 @@ class MovieObject: NSObject {
             self.year = year as! String
         }
         if let images = dic["images"] {
-            self.images = images as! [String : String]
+            self.images = images as! String
         }
         if let alt = dic["alt"] {
             self.alt = alt as! String
@@ -81,10 +82,10 @@ class MovieObject: NSObject {
             self.episodes_count = episodes_count as! Int
         }
         if let countries = dic["countries"] {
-            self.countries = countries as! [String]
+            self.countries = countries as! String
         }
         if let genres = dic["genres"] {
-            self.genres = genres as! [String]
+            self.genres = genres as! String
         }
         if let collect_count = dic["collect_count"] {
             self.collect_count = collect_count as! Int
@@ -105,7 +106,10 @@ class MovieObject: NSObject {
             self.ratings_count = ratings_count as! Int
         }
         if let aka = dic["aka"] {
-            self.aka = aka as! [String]
+            self.aka = aka as! String
+        }
+        if let alt_title = dic["alt_title"] {
+            self.alt_title = alt_title as! String
         }
     }
 }

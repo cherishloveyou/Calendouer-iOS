@@ -50,7 +50,24 @@ class ProcessManager: NSObject {
     public func GetMovie(Switch authority: Bool, handle: @escaping (_ movie: MovieObject) -> Void) {
         let top250Url = "https://api.douban.com/v2/movie/top250"
         Alamofire.request(top250Url).responseJSON { (response) in
+            let json = JSON(response.result.value!)
+            var dataDic: [String: String] = [: ]
+            dataDic["id"]                   = json["subjects"][0]["id"].stringValue 
+            dataDic["images"]               = json["subjects"][0]["images"]["medium"].stringValue
+            dataDic["title"]                = json["subjects"][0]["title"].stringValue
             
+            let getMovieUrl = "https://api.douban.com/v2/movie/\(dataDic["id"]! as String)"
+            Alamofire.request(getMovieUrl).responseJSON(completionHandler: { (response) in
+                let json_movie = JSON(response.result.value!)
+                dataDic["rating"]               = json_movie["rating"]["average"].stringValue
+                dataDic["alt_title"]            = json_movie["alt_title"].stringValue
+                dataDic["summary"]              = json_movie["summary"].stringValue
+                dataDic["mobile_link"]          = json_movie["mobile_link"].stringValue
+                dataDic["alt"]                  = json_movie["alt"].stringValue
+                
+                let movie: MovieObject = MovieObject(Dictionary: dataDic)
+                handle(movie)
+            })
         }
     }
 }

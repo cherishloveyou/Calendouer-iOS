@@ -110,6 +110,7 @@ class CalViewController: UIViewController {
     
     // Process Manger
     let process: ProcessManager = ProcessManager()
+    var cardData: [Any] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,6 +175,10 @@ class CalViewController: UIViewController {
             self.weekdayLabel.text = day.getWeekDay()
             self.lunarLabel.text = day.getLunnerDay()
             self.dayLabel.text = day.getDay()
+        }
+        
+        self.process.GetMovie(Switch: true) { (movie) in
+            self.cardData.append(movie)
         }
     }
     
