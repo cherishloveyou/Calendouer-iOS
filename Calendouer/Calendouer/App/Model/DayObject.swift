@@ -14,6 +14,7 @@ class DayObject: NSObject {
     var month: Int = 0
     var day: Int = 0
     var week: Int = 0
+    var hour: Int = 0
     var luner_year: Int = 0
     var luner_month: Int = 0
     var luner_day: Int = 0
@@ -26,6 +27,7 @@ class DayObject: NSObject {
         month = calendar.component(.month, from: date)
         day = calendar.component(.day, from: date)
         week = calendar.component(.weekday, from: date)
+        hour = calendar.component(.hour, from: date)
         
         calendar = Calendar(identifier: .chinese)
         luner_year = calendar.component(.year, from: date)

@@ -57,3 +57,25 @@ let CardTableViewCellId: String = "CardTableViewCell"
 let SwitchSettingTableViewCellId: String = "SwitchSettingTableViewCell"
 let TextSettingTableViewCellId: String = "TextSettingTableViewCell"
 let TitleSettingTableViewCellId: String = "TitleSettingTableViewCell"
+
+
+// NSObject
+extension NSObject {
+    public func selfType() -> String {
+        return "\(self.classForCoder)"
+    }
+}
+
+// UITableView
+extension UITableView {
+    public func reloadData(animated: Bool) {
+        self.reloadData()
+        if animated {
+            let animation: CATransition = CATransition()
+            animation.type = kCATransitionFade
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+            animation.duration = 0.3
+            self.layer.add(animation, forKey: "UITableViewReloadDataAnimationKey")
+        }
+    }
+}

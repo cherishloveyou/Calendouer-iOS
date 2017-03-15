@@ -302,9 +302,9 @@
 			isa = PBXGroup;
 			children = (
 				D5AF78671E6FD691006E63DC /* WeatherObject.swift */,
-				D573CB301E768B9900D06407 /* UserInfo.swift */,
 				D56289991E7058A00060DDEE /* MovieObject.swift */,
 				D5110D231E723B6C006188DB /* DayObject.swift */,
+				D573CB301E768B9900D06407 /* UserInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -921,6 +921,7 @@
 				D573CB2C1E7597AD00D06407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5D706851E68612800F61871 /* Build configuration list for PBXProject "Calendouer" */ = {
 			isa = XCConfigurationList;

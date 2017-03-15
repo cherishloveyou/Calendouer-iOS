@@ -17,6 +17,10 @@ class CalViewController: UIViewController {
     let bakView: UIView = {
         let bakView: UIView = UIView()
         bakView.backgroundColor = RGBA(r: 76, g: 175, b: 80, a: 1)
+        bakView.layer.shadowColor = UIColor.gray.cgColor
+        bakView.layer.shadowOffset = CGSize(width: 2, height: 2)
+        bakView.layer.shadowOpacity = 0.4
+        bakView.layer.shadowRadius = 2
         return bakView
     }()
     
@@ -110,7 +114,7 @@ class CalViewController: UIViewController {
     
     // Process Manger
     let process: ProcessManager = ProcessManager()
-    var cardData: [Any] = []
+    var cardData: [NSObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,6 +145,7 @@ class CalViewController: UIViewController {
         tableView.separatorColor = UIColor.clear
         tableView.dataSource = self
         tableView.delegate = self
+        
         tableView.register(UINib(nibName: CardTableViewCellId, bundle: nil), forCellReuseIdentifier: CardTableViewCellId)
         
         // Core Location
@@ -151,9 +156,13 @@ class CalViewController: UIViewController {
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.white
+        
     }
     
     private func addViews() {
+        view.addSubview(tableView)
         view.addSubview(bakView)
         bakView.addSubview(monthLabel)
         bakView.addSubview(weekdayView)
@@ -165,8 +174,6 @@ class CalViewController: UIViewController {
         bakView.addSubview(degreeLabel)
         bakView.addSubview(updateTimeLabel)
         bakView.addSubview(weatherImageView)
-        
-        view.addSubview(tableView)
     }
     
     private func setupData() {
@@ -179,6 +186,7 @@ class CalViewController: UIViewController {
         
         self.process.GetMovie(Switch: true) { (movie) in
             self.cardData.append(movie)
+            self.tableView.reloadData(animated: true)
         }
     }
     
@@ -248,21 +256,40 @@ extension CalViewController: UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return cardData.count
     }
 }
 
 extension CalViewController: UITableViewDataSource {
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = UITableViewCell()
-        cell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCellId, for: indexPath) as! CardTableViewCell
+        let cell: CardTableViewCell = tableView.dequeueReusableCell(withIdentifier: CardTableViewCellId, for: indexPath) as! CardTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
+        if cardData.count > 0 {
+            if cardData[indexPath.row].classForCoder == MovieObject.self {
+                let movie: MovieObject = self.cardData[indexPath.row] as! MovieObject
+                cell.movie = movie
+            }
+        }
         return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension CalViewController: UIScrollViewDelegate {
+    @available(iOS 2.0, *)
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y > 0) {
+            let c: Float = 0.01
+            if self.bakView.layer.shadowOpacity <= 0.8 {
+                self.bakView.layer.shadowOpacity = 0.4 + Float(scrollView.contentOffset.y) * c
+            }
+        } else {
+            self.bakView.layer.shadowOpacity = 0.4
+        }
     }
 }
 
@@ -285,6 +312,7 @@ extension CalViewController: CLLocationManagerDelegate {
                             self.degreeLabel.text = "\(weather.low)°C | \(weather.high)°C"
                             self.weatherLabel.text = "\(weather.text_day)，\(weather.text_night)"
                             self.updateTimeLabel.text = "更新：\(weather.last_update)"
+                            self.weatherImageView.image = UIImage(named: weather.getWeatherIcon())
                         })
                     }
                 }

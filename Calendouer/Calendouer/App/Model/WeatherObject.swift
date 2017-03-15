@@ -58,6 +58,9 @@ class WeatherObject: NSObject {
         if let code_day = dic["code_day"] {
             self.code_day = code_day
         }
+        if let code_night = dic["code_night"] {
+            self.code_night = code_night
+        }
         if let text_night = dic["text_night"] {
             self.text_night = text_night
         }
@@ -86,6 +89,60 @@ class WeatherObject: NSObject {
             if last_update.characters.count != 0 {
                 self.last_update = (last_update as NSString).substring(to: 10)
            }
+        }
+    }
+    
+    public func getWeatherIcon() -> String {
+        let time: DayObject = DayObject()
+        var judgeCode = ""
+        if time.hour >= 5 && time.hour <= 18 {
+            judgeCode = code_day
+        } else {
+            judgeCode = code_night
+        }
+        switch judgeCode {
+        case "0": return "sunny"// 晴天
+        case "1": return "sunny"
+        case "2": return "sunny"
+        case "3": return "sunny"
+        case "4": return "cloudy"
+        case "5": return "partly_cloudy_day"
+        case "6": return "partly_cloudy_day"
+        case "7": return "mostly_cloudy_day"
+        case "8": return "mostly_cloudy_day"
+        case "9": return "mostly_cloudy_day"
+        case "10": return "shower"
+        case "11": return "thunder_shower"
+        case "12": return "thunder_shower"
+        case "13": return "light_rain"
+        case "14": return "moderate_rain"
+        case "15": return "heavy_rain"
+        case "16": return "heavy_rain"
+        case "17": return "heavy_rain"
+        case "18": return "heavy_rain"
+        case "19": return "ice_rain"
+        case "20": return "heavy_rain"
+        case "21": return "snow"
+        case "22": return "snow"
+        case "23": return "snow"
+        case "24": return "snow"
+        case "25": return "snow"
+        case "26": return "mist"
+        case "27": return "mist"
+        case "28": return "mist"
+        case "29": return "mist"
+        case "30": return "mist"
+        case "31": return "mist"
+        case "32": return "wind"
+        case "33": return "wind"
+        case "34": return "wind"
+        case "35": return "wind"
+        case "36": return "wind"
+        case "37": return "wind"
+        case "38": return "sunny"
+        
+        default:
+            return "sunny"
         }
     }
 }
