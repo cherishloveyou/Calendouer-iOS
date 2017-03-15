@@ -424,10 +424,12 @@
 				TargetAttributes = {
 					D573CB1C1E7597AD00D06407 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9EMM8AZPKW;
 						ProvisioningStyle = Automatic;
 					};
 					D5D706891E68612800F61871 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9EMM8AZPKW;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -654,7 +656,7 @@
 		D573CB2B1E7597AD00D06407 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9EMM8AZPKW;
 				INFOPLIST_FILE = "Calendouer-widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "desgard.calendouer.Calendouer-widget";
@@ -667,7 +669,7 @@
 		D573CB2C1E7597AD00D06407 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9EMM8AZPKW;
 				INFOPLIST_FILE = "Calendouer-widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "desgard.calendouer.Calendouer-widget";
@@ -777,7 +779,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9EMM8AZPKW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -819,7 +821,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9EMM8AZPKW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

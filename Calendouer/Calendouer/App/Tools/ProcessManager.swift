@@ -51,10 +51,11 @@ class ProcessManager: NSObject {
         let top250Url = "https://api.douban.com/v2/movie/top250"
         Alamofire.request(top250Url).responseJSON { (response) in
             let json = JSON(response.result.value!)
+            let index = Int(arc4random() % 22)
             var dataDic: [String: String] = [: ]
-            dataDic["id"]                   = json["subjects"][0]["id"].stringValue 
-            dataDic["images"]               = json["subjects"][0]["images"]["medium"].stringValue
-            dataDic["title"]                = json["subjects"][0]["title"].stringValue
+            dataDic["id"]                   = json["subjects"][index]["id"].stringValue
+            dataDic["images"]               = json["subjects"][index]["images"]["medium"].stringValue
+            dataDic["title"]                = json["subjects"][index]["title"].stringValue
             
             let getMovieUrl = "https://api.douban.com/v2/movie/\(dataDic["id"]! as String)"
             Alamofire.request(getMovieUrl).responseJSON(completionHandler: { (response) in

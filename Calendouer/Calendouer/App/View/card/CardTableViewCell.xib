@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aK-RV-kwE">
@@ -40,15 +40,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="上帝之城" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnF-kR-yEy" userLabel="标题">
-                                <rect key="frame" x="102" y="58" width="101" height="21"/>
+                                <rect key="frame" x="102" y="58" width="141" height="21"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="15"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZe-We-NbS" userLabel="标题">
-                                <rect key="frame" x="18" y="103" width="185" height="78"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZe-We-NbS" userLabel="标题">
+                                <rect key="frame" x="18" y="103" width="225" height="78"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="PPf-w7-7rq"/>
+                                    <constraint firstAttribute="width" constant="225" id="PPf-w7-7rq"/>
                                 </constraints>
                                 <string key="text">巴西里约热内卢的贫民窟，这里是“上帝之城”，更是魔鬼也会叹息着转身的地方。
 阿炮（Alexandre Rodrigu…</string>
@@ -56,23 +56,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album" translatesAutoresizingMaskIntoConstraints="NO" id="XBd-23-PPW">
-                                <rect key="frame" x="238" y="58" width="92" height="125"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="751" image="album" translatesAutoresizingMaskIntoConstraints="NO" id="XBd-23-PPW">
+                                <rect key="frame" x="248" y="58" width="97" height="131"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XBd-23-PPW" firstAttribute="leading" secondItem="bZe-We-NbS" secondAttribute="trailing" constant="35" id="1in-eh-2p6"/>
+                            <constraint firstItem="XBd-23-PPW" firstAttribute="leading" secondItem="bZe-We-NbS" secondAttribute="trailing" constant="5" id="1in-eh-2p6"/>
                             <constraint firstItem="LnF-kR-yEy" firstAttribute="trailing" secondItem="bZe-We-NbS" secondAttribute="trailing" id="4uW-wD-4Hp"/>
                             <constraint firstAttribute="bottom" secondItem="bZe-We-NbS" secondAttribute="bottom" constant="18" id="8Au-Fi-OLx"/>
                             <constraint firstItem="zhc-L4-wPp" firstAttribute="top" secondItem="Sgx-xi-HzY" secondAttribute="bottom" constant="20" id="93U-Pu-rsq"/>
                             <constraint firstItem="LnF-kR-yEy" firstAttribute="top" secondItem="zhc-L4-wPp" secondAttribute="top" id="Ijf-t5-9lV"/>
                             <constraint firstItem="Sgx-xi-HzY" firstAttribute="leading" secondItem="2aK-RV-kwE" secondAttribute="leading" constant="18" id="J4W-oi-aTV"/>
-                            <constraint firstAttribute="trailing" secondItem="XBd-23-PPW" secondAttribute="trailing" constant="25" id="U4u-rk-r1r"/>
+                            <constraint firstAttribute="trailing" secondItem="XBd-23-PPW" secondAttribute="trailing" constant="10" id="U4u-rk-r1r"/>
                             <constraint firstItem="XBd-23-PPW" firstAttribute="top" secondItem="LnF-kR-yEy" secondAttribute="top" id="WAo-Ps-eF4"/>
                             <constraint firstItem="bZe-We-NbS" firstAttribute="leading" secondItem="zhc-L4-wPp" secondAttribute="leading" id="Zkh-37-4i0"/>
                             <constraint firstItem="bZe-We-NbS" firstAttribute="top" secondItem="zhc-L4-wPp" secondAttribute="bottom" id="f9P-xf-Eoh"/>
-                            <constraint firstAttribute="bottom" secondItem="XBd-23-PPW" secondAttribute="bottom" constant="16" id="gUC-hP-ffO"/>
+                            <constraint firstAttribute="bottom" secondItem="XBd-23-PPW" secondAttribute="bottom" constant="10" id="gUC-hP-ffO"/>
                             <constraint firstItem="Sgx-xi-HzY" firstAttribute="top" secondItem="2aK-RV-kwE" secondAttribute="top" constant="18" id="s0T-yh-QJl"/>
                             <constraint firstItem="LnF-kR-yEy" firstAttribute="leading" secondItem="zhc-L4-wPp" secondAttribute="trailing" constant="20" id="uem-xc-vgm"/>
                             <constraint firstItem="zhc-L4-wPp" firstAttribute="leading" secondItem="Sgx-xi-HzY" secondAttribute="leading" id="yLT-9R-z4i"/>
