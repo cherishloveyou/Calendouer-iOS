@@ -51,7 +51,7 @@ class ProcessManager: NSObject {
         let top250Url = "https://api.douban.com/v2/movie/top250"
         Alamofire.request(top250Url).responseJSON { (response) in
             let json = JSON(response.result.value!)
-            let index = Int(arc4random() % 22)
+            let index = Int(arc4random() % 20)
             var dataDic: [String: String] = [: ]
             dataDic["id"]                   = json["subjects"][index]["id"].stringValue
             dataDic["images"]               = json["subjects"][index]["images"]["medium"].stringValue

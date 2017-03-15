@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 // Log Function
 func printLog<T>(message: T,
@@ -76,6 +77,22 @@ extension UITableView {
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
             animation.duration = 0.3
             self.layer.add(animation, forKey: "UITableViewReloadDataAnimationKey")
+        }
+    }
+}
+
+// UILabel
+extension UILabel {
+    public func changeText(data: String) {
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveEaseInOut], animations: {
+            self.alpha = 0
+        }) { _ in
+            self.text = data
+            UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseIn], animations: { 
+                self.alpha = 1
+            }, completion: { (_) in
+                
+            })
         }
     }
 }

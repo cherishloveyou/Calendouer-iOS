@@ -178,10 +178,10 @@ class CalViewController: UIViewController {
     
     private func setupData() {
         self.process.GetDay(Switch: true) { (day) in
-            self.monthLabel.text = day.getMonth()
-            self.weekdayLabel.text = day.getWeekDay()
-            self.lunarLabel.text = day.getLunnerDay()
-            self.dayLabel.text = day.getDay()
+            self.monthLabel.changeText(data: day.getMonth())
+            self.weekdayLabel.changeText(data: day.getWeekDay())
+            self.lunarLabel.changeText(data: day.getLunnerDay())
+            self.dayLabel.changeText(data: day.getDay())
         }
         
         self.process.GetMovie(Switch: true) { (movie) in
@@ -305,13 +305,13 @@ extension CalViewController: CLLocationManagerDelegate {
                     if let city = place?.last {
                         // 暂时更改 UI 方法
                         // TODO: 通用方法修改视图回调接口
-                        self.cityLabel.text = city.locality
+                        self.cityLabel.changeText(data: city.locality!)
                         let la = currentLocation.coordinate.latitude
                         let lo = currentLocation.coordinate.longitude
                         self.process.GetWeather(Switch: true, latitude: CGFloat(la), longitude: CGFloat(lo), handle: { (weather) in
-                            self.degreeLabel.text = "\(weather.low)°C | \(weather.high)°C"
-                            self.weatherLabel.text = "\(weather.text_day)，\(weather.text_night)"
-                            self.updateTimeLabel.text = "更新：\(weather.last_update)"
+                            self.degreeLabel.changeText(data: "\(weather.low)°C | \(weather.high)°C")
+                            self.weatherLabel.changeText(data: "\(weather.text_day)，\(weather.text_night)")
+                            self.updateTimeLabel.changeText(data: "更新：\(weather.last_update)")
                             self.weatherImageView.image = UIImage(named: weather.getWeatherIcon())
                         })
                     }

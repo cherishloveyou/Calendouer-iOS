@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aK-RV-kwE">
@@ -57,7 +57,7 @@
                                 <color key="highlightedColor" red="0.47843137250000001" green="0.47843137250000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="751" image="album" translatesAutoresizingMaskIntoConstraints="NO" id="XBd-23-PPW">
-                                <rect key="frame" x="248" y="58" width="97" height="131"/>
+                                <rect key="frame" x="248" y="58" width="97" height="126"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,7 +72,7 @@
                             <constraint firstItem="XBd-23-PPW" firstAttribute="top" secondItem="LnF-kR-yEy" secondAttribute="top" id="WAo-Ps-eF4"/>
                             <constraint firstItem="bZe-We-NbS" firstAttribute="leading" secondItem="zhc-L4-wPp" secondAttribute="leading" id="Zkh-37-4i0"/>
                             <constraint firstItem="bZe-We-NbS" firstAttribute="top" secondItem="zhc-L4-wPp" secondAttribute="bottom" id="f9P-xf-Eoh"/>
-                            <constraint firstAttribute="bottom" secondItem="XBd-23-PPW" secondAttribute="bottom" constant="10" id="gUC-hP-ffO"/>
+                            <constraint firstAttribute="bottom" secondItem="XBd-23-PPW" secondAttribute="bottom" constant="15" id="gUC-hP-ffO"/>
                             <constraint firstItem="Sgx-xi-HzY" firstAttribute="top" secondItem="2aK-RV-kwE" secondAttribute="top" constant="18" id="s0T-yh-QJl"/>
                             <constraint firstItem="LnF-kR-yEy" firstAttribute="leading" secondItem="zhc-L4-wPp" secondAttribute="trailing" constant="20" id="uem-xc-vgm"/>
                             <constraint firstItem="zhc-L4-wPp" firstAttribute="leading" secondItem="Sgx-xi-HzY" secondAttribute="leading" id="yLT-9R-z4i"/>
