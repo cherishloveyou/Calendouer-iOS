@@ -40,6 +40,9 @@ class SettingViewController: UIViewController {
     
     let SectionHeaderHeight: CGFloat = 5
     let SectionFooterHeight: CGFloat = 5
+    let Preferences = PreferenceManager.shared
+    
+    var userInfo: UserInfo = UserInfo()
     
     var tableView: UITableView = UITableView()
 
@@ -62,6 +65,12 @@ class SettingViewController: UIViewController {
         tableView.register(UINib(nibName: SwitchSettingTableViewCellId, bundle: nil), forCellReuseIdentifier: SwitchSettingTableViewCellId)
         tableView.register(UINib(nibName: TextSettingTableViewCellId, bundle: nil), forCellReuseIdentifier: TextSettingTableViewCellId)
         tableView.register(UINib(nibName: TitleSettingTableViewCellId, bundle: nil), forCellReuseIdentifier: TitleSettingTableViewCellId)
+        
+        // Userdefault
+        let userInfo: UserInfo = Preferences[.userInfo]!
+        self.userInfo = userInfo
+        
+        
     }
     
     private func addViews() {
@@ -122,8 +131,9 @@ extension SettingViewController: UITableViewDataSource {
             }
             else if indexPath.row == SettingWeatherCell["IrWeather"]! {
                 let cell: SwitchSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingTableViewCellId, for: indexPath) as! SwitchSettingTableViewCell
-                cell.initialCell(title: "天气推送", switchAction: { (status) in
-                    print("天气推送", status)
+                cell.initialCell(title: "天气推送",status: self.userInfo.isReceiveReport,  switchAction: { (status) in
+                    self.userInfo.isReceiveReport = status
+                    self.Preferences[.userInfo] = self.userInfo
                 })
                 cell.selectionStyle = .none
                 return cell
@@ -144,8 +154,9 @@ extension SettingViewController: UITableViewDataSource {
             }
             else if indexPath.row == SettingMatterCell["IrMatter"] {
                 let cell: SwitchSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingTableViewCellId, for: indexPath) as! SwitchSettingTableViewCell
-                cell.initialCell(title: "事情推送", switchAction: { (status) in
-                    
+                cell.initialCell(title: "事情推送", status: self.userInfo.isReceiveMatter,  switchAction: { (status) in
+                    self.userInfo.isReceiveMatter = status
+                    self.Preferences[.userInfo] = self.userInfo
                 })
                 cell.selectionStyle = .none
                 return cell
@@ -166,8 +177,9 @@ extension SettingViewController: UITableViewDataSource {
             }
             else if indexPath.row == SettingMovieCell["IrMovie"]! {
                 let cell: SwitchSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingTableViewCellId, for: indexPath) as! SwitchSettingTableViewCell
-                cell.initialCell(title: "电影推送", switchAction: { (status) in
-                    
+                cell.initialCell(title: "电影推送", status: self.userInfo.isReceiveMovie,  switchAction: { (status) in
+                    self.userInfo.isReceiveMovie = status
+                    self.Preferences[.userInfo] = self.userInfo
                 })
                 cell.selectionStyle = .none
                 return cell

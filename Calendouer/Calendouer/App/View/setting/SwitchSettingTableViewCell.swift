@@ -45,8 +45,11 @@ class SwitchSettingTableViewCell: UITableViewCell {
         }
     }
     
-    public func initialCell(title: String, switchAction: @escaping (_ isOn: Bool) -> ()) {
+    public func initialCell(title: String, status: Bool, switchAction: @escaping (_ isOn: Bool) -> ()) {
         self.titleLabel.text = title
+        if !status {
+            self.onSwitch.changeValue()
+        }
         self.valueChanged = switchAction
     }
     

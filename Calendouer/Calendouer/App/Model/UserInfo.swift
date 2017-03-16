@@ -16,10 +16,8 @@ final class UserInfo: NSObject, NSCoding {
     var isReceiveReport: Bool = true
     var isReceiveMatter: Bool = true
     
-    convenience init(id: Int, name: String, irMovie: Bool, irReport: Bool, irMatter: Bool) {
+    convenience init(irMovie: Bool, irReport: Bool, irMatter: Bool) {
         self.init()
-        self.id = id
-        self.name = name
         
         self.isReceiveMovie = irMovie
         self.isReceiveMatter = irMatter
