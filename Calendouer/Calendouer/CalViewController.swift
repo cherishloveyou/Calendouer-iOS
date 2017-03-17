@@ -74,7 +74,7 @@ class CalViewController: UIViewController {
     
     let updateTimeLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "更新：--"
+        _label.text = "--"
         _label.textColor = .white
         _label.textAlignment = .right
         _label.font = DouDefalutFont
@@ -145,6 +145,11 @@ class CalViewController: UIViewController {
         tableView.separatorColor = UIColor.clear
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // Refresh Control
+        let refreshControl: UIRefreshControl = UIRefreshControl()
+        refreshControl.backgroundColor = UIColor.clear
+        tableView.addSubview(refreshControl)
         
         tableView.register(UINib(nibName: CardTableViewCellId, bundle: nil), forCellReuseIdentifier: CardTableViewCellId)
         
