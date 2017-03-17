@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2878DFDE1E7B828E00BDF37E /* TableViewConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878DFDD1E7B828E00BDF37E /* TableViewConfigurationType.swift */; };
+		2878DFE01E7B82D600BDF37E /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878DFDF1E7B82D600BDF37E /* DemoViewController.swift */; };
 		2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2545464D916F8368106AA /* Pods_Calendouer.framework */; };
 		D5110D241E723B6C006188DB /* DayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D231E723B6C006188DB /* DayObject.swift */; };
 		D5110D261E72A633006188DB /* AppStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D251E72A633006188DB /* AppStatic.swift */; };
@@ -82,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2878DFDD1E7B828E00BDF37E /* TableViewConfigurationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewConfigurationType.swift; sourceTree = "<group>"; };
+		2878DFDF1E7B82D600BDF37E /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		C3B2545464D916F8368106AA /* Pods_Calendouer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendouer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5110D231E723B6C006188DB /* DayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayObject.swift; path = App/Model/DayObject.swift; sourceTree = "<group>"; };
 		D5110D251E72A633006188DB /* AppStatic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatic.swift; sourceTree = "<group>"; };
@@ -171,6 +175,16 @@
 				DF9CEEE2CC15DEF670F499B5 /* Pods-Calendouer.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2878DFDC1E7B81F900BDF37E /* tableview-future */ = {
+			isa = PBXGroup;
+			children = (
+				2878DFDD1E7B828E00BDF37E /* TableViewConfigurationType.swift */,
+				2878DFDF1E7B82D600BDF37E /* DemoViewController.swift */,
+			);
+			name = "tableview-future";
+			path = "App/Controller/tableview-future";
 			sourceTree = "<group>";
 		};
 		B3E5375B9D7F39E38B4D7ADB /* Frameworks */ = {
@@ -284,6 +298,7 @@
 				D5D7068F1E68612800F61871 /* CalViewController.swift */,
 				D5D706C51E6CEF0600F61871 /* SettingViewController.swift */,
 				D5D706C31E6BAB9000F61871 /* TabViewController.swift */,
+				2878DFDC1E7B81F900BDF37E /* tableview-future */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -585,6 +600,8 @@
 				D573CB2F1E76828900D06407 /* PreferenceManager.swift in Sources */,
 				D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */,
 				D5D706C01E68681000F61871 /* AppDefault.swift in Sources */,
+				2878DFDE1E7B828E00BDF37E /* TableViewConfigurationType.swift in Sources */,
+				2878DFE01E7B82D600BDF37E /* DemoViewController.swift in Sources */,
 				D5D7068E1E68612800F61871 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
