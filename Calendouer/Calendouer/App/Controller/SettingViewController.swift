@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingViewController: UIViewController {
+    @IBOutlet weak var titleBarButton: UIButton!
     
     let SettingSectionType: [String: Int] = [
         "WeatherSection": 0,
@@ -70,11 +71,20 @@ class SettingViewController: UIViewController {
         let userInfo: UserInfo = Preferences[.userInfo]!
         self.userInfo = userInfo
         
-        
+        // Hide Model
+        let thirdTap = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.thirdTap))
+        thirdTap.numberOfTapsRequired = 3
+        thirdTap.numberOfTouchesRequired = 1
+        self.titleBarButton.addGestureRecognizer(thirdTap)
     }
     
     private func addViews() {
         view.addSubview(tableView)
+    }
+    
+    public func thirdTap() {
+        let debugin = DebugInViewViewController()
+        navigationController?.pushViewController(debugin, animated: true)
     }
 
 }
