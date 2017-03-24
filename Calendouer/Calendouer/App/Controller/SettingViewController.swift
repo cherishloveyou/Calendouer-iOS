@@ -53,6 +53,12 @@ class SettingViewController: UIViewController {
         addViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     private func initialView() {
         view.backgroundColor = DouBackGray
         

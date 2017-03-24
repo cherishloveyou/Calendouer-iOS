@@ -12,6 +12,7 @@ class DebugInViewViewController: UIViewController {
     
     let cellData: [DebugIn] = [
         DebugIn(id: "CalViewController"),
+        DebugIn(id: "MovieDetailViewController"),
     ]
     
     var tableView: UITableView!
@@ -22,12 +23,19 @@ class DebugInViewViewController: UIViewController {
         configTableViewData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     private func initialView() {
+        self.title = "Debug In"
+        
         tableView = UITableView(frame: view.bounds, style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DefaultCell")
-        
     }
     
     private func addSubView() {

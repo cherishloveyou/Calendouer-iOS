@@ -12,6 +12,7 @@
 		2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2545464D916F8368106AA /* Pods_Calendouer.framework */; };
 		D5110D241E723B6C006188DB /* DayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D231E723B6C006188DB /* DayObject.swift */; };
 		D5110D261E72A633006188DB /* AppStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D251E72A633006188DB /* AppStatic.swift */; };
+		D51343AF1E851BBD003EE79B /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51343AE1E851BBD003EE79B /* MovieDetailViewController.swift */; };
 		D53F1E3A1E7E22F300CFE181 /* DebugInViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53F1E391E7E22F300CFE181 /* DebugInViewViewController.swift */; };
 		D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56289991E7058A00060DDEE /* MovieObject.swift */; };
 		D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */; };
@@ -90,6 +91,7 @@
 		C3B2545464D916F8368106AA /* Pods_Calendouer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendouer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5110D231E723B6C006188DB /* DayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayObject.swift; path = App/Model/DayObject.swift; sourceTree = "<group>"; };
 		D5110D251E72A633006188DB /* AppStatic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatic.swift; sourceTree = "<group>"; };
+		D51343AE1E851BBD003EE79B /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailViewController.swift; path = App/Controller/detail/MovieDetailViewController.swift; sourceTree = "<group>"; };
 		D53F1E391E7E22F300CFE181 /* DebugInViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugInViewViewController.swift; path = App/Controller/debugin/DebugInViewViewController.swift; sourceTree = "<group>"; };
 		D56289991E7058A00060DDEE /* MovieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieObject.swift; path = App/Model/MovieObject.swift; sourceTree = "<group>"; };
 		D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchSettingTableViewCell.swift; path = App/View/setting/SwitchSettingTableViewCell.swift; sourceTree = "<group>"; };
@@ -201,6 +203,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D51343AD1E84A512003EE79B /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				D51343AE1E851BBD003EE79B /* MovieDetailViewController.swift */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
 		D53F1E381E7E229E00CFE181 /* debugin */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +318,7 @@
 				D5D7068F1E68612800F61871 /* CalViewController.swift */,
 				D5D706C51E6CEF0600F61871 /* SettingViewController.swift */,
 				D5D706C31E6BAB9000F61871 /* TabViewController.swift */,
+				D51343AD1E84A512003EE79B /* detail */,
 				D53F1E381E7E229E00CFE181 /* debugin */,
 				2878DFDC1E7B81F900BDF37E /* tableview-future */,
 			);
@@ -599,6 +610,7 @@
 				D5AF785B1E6E9C6D006E63DC /* AnimatedSwitch.swift in Sources */,
 				D5110D261E72A633006188DB /* AppStatic.swift in Sources */,
 				D5D706C61E6CEF0600F61871 /* SettingViewController.swift in Sources */,
+				D51343AF1E851BBD003EE79B /* MovieDetailViewController.swift in Sources */,
 				D56289A21E712ABF0060DDEE /* TextSettingTableViewCell.swift in Sources */,
 				D573CB311E768B9900D06407 /* UserInfo.swift in Sources */,
 				D53F1E3A1E7E22F300CFE181 /* DebugInViewViewController.swift in Sources */,
