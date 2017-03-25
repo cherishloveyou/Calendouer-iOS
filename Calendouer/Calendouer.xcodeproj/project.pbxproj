@@ -35,6 +35,8 @@
 		D5AF78611E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework in Resources */ = {isa = PBXBuildFile; fileRef = D5AF78601E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework */; };
 		D5AF78661E6F8134006E63DC /* ProcessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78651E6F8134006E63DC /* ProcessManager.swift */; };
 		D5AF78681E6FD691006E63DC /* WeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78671E6FD691006E63DC /* WeatherObject.swift */; };
+		D5CAD9AF1E86CAE600669251 /* MoviePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CAD9AD1E86CAE600669251 /* MoviePostTableViewCell.swift */; };
+		D5CAD9B01E86CAE600669251 /* MoviePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD9AE1E86CAE600669251 /* MoviePostTableViewCell.xib */; };
 		D5D7068E1E68612800F61871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7068D1E68612800F61871 /* AppDelegate.swift */; };
 		D5D706901E68612800F61871 /* CalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7068F1E68612800F61871 /* CalViewController.swift */; };
 		D5D706931E68612800F61871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D706911E68612800F61871 /* Main.storyboard */; };
@@ -116,6 +118,8 @@
 		D5AF78601E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThinkpageAPI_v_1_0_1.framework; sourceTree = "<group>"; };
 		D5AF78651E6F8134006E63DC /* ProcessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProcessManager.swift; path = App/Tools/ProcessManager.swift; sourceTree = "<group>"; };
 		D5AF78671E6FD691006E63DC /* WeatherObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherObject.swift; path = App/Model/WeatherObject.swift; sourceTree = "<group>"; };
+		D5CAD9AD1E86CAE600669251 /* MoviePostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviePostTableViewCell.swift; path = App/View/detail/MoviePostTableViewCell.swift; sourceTree = "<group>"; };
+		D5CAD9AE1E86CAE600669251 /* MoviePostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MoviePostTableViewCell.xib; path = App/View/detail/MoviePostTableViewCell.xib; sourceTree = "<group>"; };
 		D5D7068A1E68612800F61871 /* Calendouer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendouer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D7068D1E68612800F61871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D7068F1E68612800F61871 /* CalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +265,15 @@
 			name = Tools;
 			sourceTree = "<group>";
 		};
+		D5CAD9AC1E86C9CE00669251 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				D5CAD9AD1E86CAE600669251 /* MoviePostTableViewCell.swift */,
+				D5CAD9AE1E86CAE600669251 /* MoviePostTableViewCell.xib */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
 		D5D706811E68612800F61871 = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +341,7 @@
 		D5D706BC1E68679F00F61871 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D5CAD9AC1E86C9CE00669251 /* detail */,
 				D562899B1E70E06F0060DDEE /* setting */,
 				D5AF78241E6D2B72006E63DC /* card */,
 				D5D706911E68612800F61871 /* Main.storyboard */,
@@ -520,6 +534,7 @@
 			files = (
 				D5D706981E68612800F61871 /* LaunchScreen.storyboard in Resources */,
 				D56289A71E712AD50060DDEE /* TitleSettingTableViewCell.xib in Resources */,
+				D5CAD9B01E86CAE600669251 /* MoviePostTableViewCell.xib in Resources */,
 				D562899F1E711F220060DDEE /* SwitchSettingTableViewCell.xib in Resources */,
 				D56289A31E712ABF0060DDEE /* TextSettingTableViewCell.xib in Resources */,
 				D5AF78611E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework in Resources */,
@@ -608,6 +623,7 @@
 			files = (
 				D5AF78661E6F8134006E63DC /* ProcessManager.swift in Sources */,
 				D5AF785B1E6E9C6D006E63DC /* AnimatedSwitch.swift in Sources */,
+				D5CAD9AF1E86CAE600669251 /* MoviePostTableViewCell.swift in Sources */,
 				D5110D261E72A633006188DB /* AppStatic.swift in Sources */,
 				D5D706C61E6CEF0600F61871 /* SettingViewController.swift in Sources */,
 				D51343AF1E851BBD003EE79B /* MovieDetailViewController.swift in Sources */,

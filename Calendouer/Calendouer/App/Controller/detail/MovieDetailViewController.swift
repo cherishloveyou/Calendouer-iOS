@@ -26,8 +26,10 @@ class MovieDetailViewController: UIViewController {
     }
     
     private func initialView() {
-        tableView = UITableView(frame: view.bounds, style: UITableViewStyle.plain)
-        tableView.backgroundColor = DouGreen
+        self.title = "电影"
+        
+        tableView = UITableView(frame: view.bounds, style: UITableViewStyle.grouped)
+        tableView .backgroundView?.backgroundColor = DouGreen
         tableView.separatorColor = UIColor.clear
         tableView.dataSource = self
         tableView.delegate = self
@@ -51,6 +53,19 @@ extension MovieDetailViewController: UITableViewDelegate {
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil
+    }
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
     }
 }
 
