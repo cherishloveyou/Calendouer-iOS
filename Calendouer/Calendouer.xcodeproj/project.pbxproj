@@ -13,6 +13,8 @@
 		D5110D241E723B6C006188DB /* DayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D231E723B6C006188DB /* DayObject.swift */; };
 		D5110D261E72A633006188DB /* AppStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D251E72A633006188DB /* AppStatic.swift */; };
 		D51343AF1E851BBD003EE79B /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51343AE1E851BBD003EE79B /* MovieDetailViewController.swift */; };
+		D515B4C81E87910200EC7BF9 /* MovieSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D515B4C61E87910200EC7BF9 /* MovieSummaryTableViewCell.swift */; };
+		D515B4C91E87910200EC7BF9 /* MovieSummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D515B4C71E87910200EC7BF9 /* MovieSummaryTableViewCell.xib */; };
 		D53F1E3A1E7E22F300CFE181 /* DebugInViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53F1E391E7E22F300CFE181 /* DebugInViewViewController.swift */; };
 		D562899A1E7058A00060DDEE /* MovieObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56289991E7058A00060DDEE /* MovieObject.swift */; };
 		D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */; };
@@ -37,6 +39,8 @@
 		D5AF78681E6FD691006E63DC /* WeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78671E6FD691006E63DC /* WeatherObject.swift */; };
 		D5CAD9AF1E86CAE600669251 /* MoviePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CAD9AD1E86CAE600669251 /* MoviePostTableViewCell.swift */; };
 		D5CAD9B01E86CAE600669251 /* MoviePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD9AE1E86CAE600669251 /* MoviePostTableViewCell.xib */; };
+		D5CAD9B31E877ABA00669251 /* MovieIntroductionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CAD9B11E877ABA00669251 /* MovieIntroductionTableViewCell.swift */; };
+		D5CAD9B41E877ABA00669251 /* MovieIntroductionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD9B21E877ABA00669251 /* MovieIntroductionTableViewCell.xib */; };
 		D5D7068E1E68612800F61871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7068D1E68612800F61871 /* AppDelegate.swift */; };
 		D5D706901E68612800F61871 /* CalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D7068F1E68612800F61871 /* CalViewController.swift */; };
 		D5D706931E68612800F61871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D706911E68612800F61871 /* Main.storyboard */; };
@@ -94,6 +98,8 @@
 		D5110D231E723B6C006188DB /* DayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayObject.swift; path = App/Model/DayObject.swift; sourceTree = "<group>"; };
 		D5110D251E72A633006188DB /* AppStatic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatic.swift; sourceTree = "<group>"; };
 		D51343AE1E851BBD003EE79B /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailViewController.swift; path = App/Controller/detail/MovieDetailViewController.swift; sourceTree = "<group>"; };
+		D515B4C61E87910200EC7BF9 /* MovieSummaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieSummaryTableViewCell.swift; path = App/View/detail/MovieSummaryTableViewCell.swift; sourceTree = "<group>"; };
+		D515B4C71E87910200EC7BF9 /* MovieSummaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieSummaryTableViewCell.xib; path = App/View/detail/MovieSummaryTableViewCell.xib; sourceTree = "<group>"; };
 		D53F1E391E7E22F300CFE181 /* DebugInViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugInViewViewController.swift; path = App/Controller/debugin/DebugInViewViewController.swift; sourceTree = "<group>"; };
 		D56289991E7058A00060DDEE /* MovieObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieObject.swift; path = App/Model/MovieObject.swift; sourceTree = "<group>"; };
 		D562899C1E711F220060DDEE /* SwitchSettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchSettingTableViewCell.swift; path = App/View/setting/SwitchSettingTableViewCell.swift; sourceTree = "<group>"; };
@@ -120,6 +126,8 @@
 		D5AF78671E6FD691006E63DC /* WeatherObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherObject.swift; path = App/Model/WeatherObject.swift; sourceTree = "<group>"; };
 		D5CAD9AD1E86CAE600669251 /* MoviePostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviePostTableViewCell.swift; path = App/View/detail/MoviePostTableViewCell.swift; sourceTree = "<group>"; };
 		D5CAD9AE1E86CAE600669251 /* MoviePostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MoviePostTableViewCell.xib; path = App/View/detail/MoviePostTableViewCell.xib; sourceTree = "<group>"; };
+		D5CAD9B11E877ABA00669251 /* MovieIntroductionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieIntroductionTableViewCell.swift; path = App/View/detail/MovieIntroductionTableViewCell.swift; sourceTree = "<group>"; };
+		D5CAD9B21E877ABA00669251 /* MovieIntroductionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MovieIntroductionTableViewCell.xib; path = App/View/detail/MovieIntroductionTableViewCell.xib; sourceTree = "<group>"; };
 		D5D7068A1E68612800F61871 /* Calendouer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendouer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D7068D1E68612800F61871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D7068F1E68612800F61871 /* CalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +278,10 @@
 			children = (
 				D5CAD9AD1E86CAE600669251 /* MoviePostTableViewCell.swift */,
 				D5CAD9AE1E86CAE600669251 /* MoviePostTableViewCell.xib */,
+				D5CAD9B11E877ABA00669251 /* MovieIntroductionTableViewCell.swift */,
+				D5CAD9B21E877ABA00669251 /* MovieIntroductionTableViewCell.xib */,
+				D515B4C61E87910200EC7BF9 /* MovieSummaryTableViewCell.swift */,
+				D515B4C71E87910200EC7BF9 /* MovieSummaryTableViewCell.xib */,
 			);
 			name = detail;
 			sourceTree = "<group>";
@@ -475,12 +487,12 @@
 				TargetAttributes = {
 					D573CB1C1E7597AD00D06407 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9EMM8AZPKW;
+						DevelopmentTeam = C3JGTFM664;
 						ProvisioningStyle = Automatic;
 					};
 					D5D706891E68612800F61871 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9EMM8AZPKW;
+						DevelopmentTeam = C3JGTFM664;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -534,11 +546,13 @@
 			files = (
 				D5D706981E68612800F61871 /* LaunchScreen.storyboard in Resources */,
 				D56289A71E712AD50060DDEE /* TitleSettingTableViewCell.xib in Resources */,
+				D5CAD9B41E877ABA00669251 /* MovieIntroductionTableViewCell.xib in Resources */,
 				D5CAD9B01E86CAE600669251 /* MoviePostTableViewCell.xib in Resources */,
 				D562899F1E711F220060DDEE /* SwitchSettingTableViewCell.xib in Resources */,
 				D56289A31E712ABF0060DDEE /* TextSettingTableViewCell.xib in Resources */,
 				D5AF78611E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework in Resources */,
 				D5D706951E68612800F61871 /* Assets.xcassets in Resources */,
+				D515B4C91E87910200EC7BF9 /* MovieSummaryTableViewCell.xib in Resources */,
 				D5D706931E68612800F61871 /* Main.storyboard in Resources */,
 				D5AF78281E6D2BC7006E63DC /* CardTableViewCell.xib in Resources */,
 			);
@@ -624,6 +638,7 @@
 				D5AF78661E6F8134006E63DC /* ProcessManager.swift in Sources */,
 				D5AF785B1E6E9C6D006E63DC /* AnimatedSwitch.swift in Sources */,
 				D5CAD9AF1E86CAE600669251 /* MoviePostTableViewCell.swift in Sources */,
+				D515B4C81E87910200EC7BF9 /* MovieSummaryTableViewCell.swift in Sources */,
 				D5110D261E72A633006188DB /* AppStatic.swift in Sources */,
 				D5D706C61E6CEF0600F61871 /* SettingViewController.swift in Sources */,
 				D51343AF1E851BBD003EE79B /* MovieDetailViewController.swift in Sources */,
@@ -641,6 +656,7 @@
 				D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */,
 				D5D706C01E68681000F61871 /* AppDefault.swift in Sources */,
 				2878DFDE1E7B828E00BDF37E /* TableViewConfigurationType.swift in Sources */,
+				D5CAD9B31E877ABA00669251 /* MovieIntroductionTableViewCell.swift in Sources */,
 				2878DFE01E7B82D600BDF37E /* DemoViewController.swift in Sources */,
 				D5D7068E1E68612800F61871 /* AppDelegate.swift in Sources */,
 			);
@@ -713,7 +729,7 @@
 		D573CB2B1E7597AD00D06407 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 9EMM8AZPKW;
+				DEVELOPMENT_TEAM = C3JGTFM664;
 				INFOPLIST_FILE = "Calendouer-widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "desgard.calendouer.Calendouer-widget";
@@ -726,7 +742,7 @@
 		D573CB2C1E7597AD00D06407 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 9EMM8AZPKW;
+				DEVELOPMENT_TEAM = C3JGTFM664;
 				INFOPLIST_FILE = "Calendouer-widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "desgard.calendouer.Calendouer-widget";
@@ -836,7 +852,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9EMM8AZPKW;
+				DEVELOPMENT_TEAM = C3JGTFM664;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -878,7 +894,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 9EMM8AZPKW;
+				DEVELOPMENT_TEAM = C3JGTFM664;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

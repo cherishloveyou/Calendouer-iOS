@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="270" id="KGk-i7-Jjw" customClass="MoviePostTableViewCell" customModule="Calendouer" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MoviePostTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoviePostTableViewCell" rowHeight="270" id="KGk-i7-Jjw" customClass="MoviePostTableViewCell" customModule="Calendouer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="269.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="269"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album" translatesAutoresizingMaskIntoConstraints="NO" id="7De-ai-Emz">
@@ -26,12 +26,17 @@
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstItem="7De-ai-Emz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19.5" id="1Ig-rs-IM8"/>
                     <constraint firstItem="7De-ai-Emz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9yW-JE-W9r"/>
                     <constraint firstAttribute="bottom" secondItem="7De-ai-Emz" secondAttribute="bottom" constant="27" id="og1-us-fx0"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="ablumImage" destination="7De-ai-Emz" id="jU8-O2-rx5"/>
+                <outlet property="bakView" destination="H2p-sc-9uM" id="37l-36-4HK"/>
+            </connections>
             <point key="canvasLocation" x="25" y="89.5"/>
         </tableViewCell>
     </objects>
