@@ -155,6 +155,8 @@ class CalViewController: UIViewController {
         // Refresh Control
         let refreshControl: UIRefreshControl = UIRefreshControl()
         refreshControl.backgroundColor = UIColor.clear
+        refreshControl.attributedTitle = NSAttributedString(string: "换电影")
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
         
         tableView.register(UINib(nibName: CardTableViewCellId, bundle: nil), forCellReuseIdentifier: CardTableViewCellId)
@@ -257,6 +259,11 @@ class CalViewController: UIViewController {
             make.bottom.equalTo(view.snp.bottom)
             make.right.equalTo(view.snp.right)
         }
+    }
+    
+    @objc private func refresh(sender: AnyObject) {
+        print ("refresh")
+        
     }
 }
 
