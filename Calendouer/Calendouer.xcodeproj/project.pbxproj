@@ -10,6 +10,8 @@
 		2878DFDE1E7B828E00BDF37E /* TableViewConfigurationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878DFDD1E7B828E00BDF37E /* TableViewConfigurationType.swift */; };
 		2878DFE01E7B82D600BDF37E /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878DFDF1E7B82D600BDF37E /* DemoViewController.swift */; };
 		2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B2545464D916F8368106AA /* Pods_Calendouer.framework */; };
+		D5094C7B1E8B82D70042B60A /* AnimationTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5094C7A1E8B82D70042B60A /* AnimationTestViewController.swift */; };
+		D5094C801E8B8F230042B60A /* refresh-cal.json in Resources */ = {isa = PBXBuildFile; fileRef = D5094C7F1E8B8F230042B60A /* refresh-cal.json */; };
 		D5110D241E723B6C006188DB /* DayObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D231E723B6C006188DB /* DayObject.swift */; };
 		D5110D261E72A633006188DB /* AppStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5110D251E72A633006188DB /* AppStatic.swift */; };
 		D51343AF1E851BBD003EE79B /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51343AE1E851BBD003EE79B /* MovieDetailViewController.swift */; };
@@ -95,6 +97,8 @@
 		2878DFDD1E7B828E00BDF37E /* TableViewConfigurationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewConfigurationType.swift; sourceTree = "<group>"; };
 		2878DFDF1E7B82D600BDF37E /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		C3B2545464D916F8368106AA /* Pods_Calendouer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calendouer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5094C7A1E8B82D70042B60A /* AnimationTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationTestViewController.swift; path = App/Controller/debugin/AnimationTestViewController.swift; sourceTree = "<group>"; };
+		D5094C7F1E8B8F230042B60A /* refresh-cal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "refresh-cal.json"; sourceTree = "<group>"; };
 		D5110D231E723B6C006188DB /* DayObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayObject.swift; path = App/Model/DayObject.swift; sourceTree = "<group>"; };
 		D5110D251E72A633006188DB /* AppStatic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStatic.swift; sourceTree = "<group>"; };
 		D51343AE1E851BBD003EE79B /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailViewController.swift; path = App/Controller/detail/MovieDetailViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +219,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D5094C7C1E8B83280042B60A /* lottie-json */ = {
+			isa = PBXGroup;
+			children = (
+				D5094C7F1E8B8F230042B60A /* refresh-cal.json */,
+			);
+			name = "lottie-json";
+			sourceTree = "<group>";
+		};
 		D51343AD1E84A512003EE79B /* detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				D53F1E391E7E22F300CFE181 /* DebugInViewViewController.swift */,
+				D5094C7A1E8B82D70042B60A /* AnimationTestViewController.swift */,
 			);
 			name = debugin;
 			sourceTree = "<group>";
@@ -375,6 +388,7 @@
 		D5D706BE1E6867B000F61871 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				D5094C7C1E8B83280042B60A /* lottie-json */,
 				D5D706941E68612800F61871 /* Assets.xcassets */,
 				D5D706961E68612800F61871 /* LaunchScreen.storyboard */,
 				D5D706991E68612900F61871 /* Info.plist */,
@@ -552,6 +566,7 @@
 				D56289A31E712ABF0060DDEE /* TextSettingTableViewCell.xib in Resources */,
 				D5AF78611E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework in Resources */,
 				D5D706951E68612800F61871 /* Assets.xcassets in Resources */,
+				D5094C801E8B8F230042B60A /* refresh-cal.json in Resources */,
 				D515B4C91E87910200EC7BF9 /* MovieSummaryTableViewCell.xib in Resources */,
 				D5D706931E68612800F61871 /* Main.storyboard in Resources */,
 				D5AF78281E6D2BC7006E63DC /* CardTableViewCell.xib in Resources */,
@@ -653,6 +668,7 @@
 				D5110D241E723B6C006188DB /* DayObject.swift in Sources */,
 				D5D706901E68612800F61871 /* CalViewController.swift in Sources */,
 				D573CB2F1E76828900D06407 /* PreferenceManager.swift in Sources */,
+				D5094C7B1E8B82D70042B60A /* AnimationTestViewController.swift in Sources */,
 				D562899E1E711F220060DDEE /* SwitchSettingTableViewCell.swift in Sources */,
 				D5D706C01E68681000F61871 /* AppDefault.swift in Sources */,
 				2878DFDE1E7B828E00BDF37E /* TableViewConfigurationType.swift in Sources */,
