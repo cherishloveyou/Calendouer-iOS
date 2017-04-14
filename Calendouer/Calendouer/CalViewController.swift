@@ -116,6 +116,8 @@ class CalViewController: UIViewController {
     let process: ProcessManager = ProcessManager()
     var cardData: [NSObject] = []
     
+    // Refresh Controller
+    var refreshControl: UIRefreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         initialView()
@@ -153,7 +155,7 @@ class CalViewController: UIViewController {
         tableView.delegate = self
         
         // Refresh Control
-        let refreshControl: UIRefreshControl = UIRefreshControl()
+        refreshControl = UIRefreshControl()
         refreshControl.backgroundColor = UIColor.clear
         refreshControl.attributedTitle = NSAttributedString(string: "换电影")
         refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
@@ -262,8 +264,12 @@ class CalViewController: UIViewController {
     }
     
     @objc private func refresh(sender: AnyObject) {
-        print ("refresh")
-        
+        self.cardData = []
+        self.process.GetMovie(Switch: true) { (movie) in
+            self.cardData.append(movie)
+            self.tableView.reloadData()
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 
