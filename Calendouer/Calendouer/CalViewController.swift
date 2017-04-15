@@ -300,9 +300,14 @@ extension CalViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        if cardData[indexPath.row].classForCoder == MovieObject.self {
+            let movieDetailVC = MovieDetailViewController()
+            self.navigationController?.pushViewController(movieDetailVC, animated: true)
+        }
     }
 }
 
+// Shadow Changed Effect 
 extension CalViewController: UIScrollViewDelegate {
     @available(iOS 2.0, *)
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {

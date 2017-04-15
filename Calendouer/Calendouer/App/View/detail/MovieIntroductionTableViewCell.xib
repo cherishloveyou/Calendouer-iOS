@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="144"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上帝之城" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7W-ed-KAM">
@@ -42,7 +42,7 @@
                         <color key="textColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="片长：130分钟" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tx-aG-D6C">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="片长：130分钟" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tx-aG-D6C">
                         <rect key="frame" x="26" y="119" width="80" height="17"/>
                         <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="12"/>
                         <color key="textColor" red="0.6588235294" green="0.6588235294" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,7 +75,12 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="basicInfoLabel" destination="gnk-7D-9qu" id="PGZ-m2-DUl"/>
+                <outlet property="officalNameLabel" destination="kfn-r0-dwX" id="Y1g-jJ-jWh"/>
                 <outlet property="ratingCardView" destination="1Iw-uO-Rmv" id="jgs-iZ-0aE"/>
+                <outlet property="releaseTimeLabel" destination="Xdt-O6-FNt" id="aIU-Gd-LYh"/>
+                <outlet property="titleLabel" destination="W7W-ed-KAM" id="bNM-gL-5Ml"/>
+                <outlet property="videoLenLabel" destination="4Tx-aG-D6C" id="jy6-SV-i8O"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </tableViewCell>

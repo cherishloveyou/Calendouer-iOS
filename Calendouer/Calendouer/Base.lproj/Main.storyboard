@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YKo-Uh-wQc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YKo-Uh-wQc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +25,7 @@
                     <navigationItem key="navigationItem" id="3Wg-9z-6qK">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="beq-sT-COQ">
-                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="设置">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="1660" y="331.48425787106447"/>
         </scene>
-        <!--日历-->
+        <!--Cal View Controller-->
         <scene sceneID="3HO-aO-beE">
             <objects>
                 <viewController id="Fcs-U4-BZ4" customClass="CalViewController" customModule="Calendouer" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,11 +53,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="日历" image="calendar" selectedImage="calendar" id="9DQ-Cd-g9M"/>
+                    <navigationItem key="navigationItem" id="4lz-FG-gZg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nun-YN-gIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="721" y="-343"/>
+            <point key="canvasLocation" x="1660" y="-343.17841079460271"/>
         </scene>
         <!--Tab View Controller-->
         <scene sceneID="K9D-6B-MA2">
@@ -72,7 +72,7 @@
                         <color key="selectedImageTintColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Fcs-U4-BZ4" kind="relationship" relationship="viewControllers" id="GtQ-Oh-w3z"/>
+                        <segue destination="GJg-ph-TNq" kind="relationship" relationship="viewControllers" id="GtQ-Oh-w3z"/>
                         <segue destination="3yc-1S-Yac" kind="relationship" relationship="viewControllers" id="z8u-4g-EMf"/>
                     </connections>
                 </tabBarController>
@@ -98,6 +98,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w0S-vt-3Gj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="720.79999999999995" y="331.48425787106447"/>
+        </scene>
+        <!--日历-->
+        <scene sceneID="eYa-E5-45R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GJg-ph-TNq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="日历" image="calendar" selectedImage="calendar" id="9DQ-Cd-g9M"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sPP-kt-E7E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fcs-U4-BZ4" kind="relationship" relationship="rootViewController" id="W2W-Ge-Vpc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SYr-7h-tFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720.79999999999995" y="-343.17841079460271"/>
         </scene>
     </scenes>
     <resources>

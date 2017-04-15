@@ -11,6 +11,20 @@ import UIKit
 class MovieIntroductionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ratingCardView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var basicInfoLabel: UILabel!
+    @IBOutlet weak var officalNameLabel: UILabel!
+    @IBOutlet weak var releaseTimeLabel: UILabel!
+    @IBOutlet weak var videoLenLabel: UILabel!
+    
+    var movie: MovieObject? {
+        didSet {
+            self.titleLabel.text = movie?.title
+            self.officalNameLabel.text = "原名：\(movie?.original_title)"
+            self.releaseTimeLabel.text = "上映时间：\(movie?.year)"
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
