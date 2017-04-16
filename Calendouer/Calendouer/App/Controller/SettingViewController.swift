@@ -147,7 +147,7 @@ extension SettingViewController: UITableViewDataSource {
             }
             else if indexPath.row == SettingWeatherCell["IrWeather"]! {
                 let cell: SwitchSettingTableViewCell = tableView.dequeueReusableCell(withIdentifier: SwitchSettingTableViewCellId, for: indexPath) as! SwitchSettingTableViewCell
-                cell.initialCell(title: "天气推送",status: self.userInfo.isReceiveReport,  switchAction: { (status) in
+                cell.initialCell(title: "空气质量推送",status: self.userInfo.isReceiveReport,  switchAction: { (status) in
                     self.userInfo.isReceiveReport = status
                     self.Preferences[.userInfo] = self.userInfo
                 })

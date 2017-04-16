@@ -18,6 +18,14 @@ class CardTableViewCell: UITableViewCell {
     @IBOutlet weak var cardTitleLabel: UILabel!
     @IBOutlet weak var illImageView: UIImageView!
     
+    // Star For Rating
+    @IBOutlet weak var star_1: UIImageView!
+    @IBOutlet weak var star_2: UIImageView!
+    @IBOutlet weak var star_3: UIImageView!
+    @IBOutlet weak var star_4: UIImageView!
+    @IBOutlet weak var star_5: UIImageView!
+    private var starArray = [UIImageView]()
+    
     var movie: MovieObject? {
         didSet {
             self.eventTitle.text = movie?.title
@@ -25,6 +33,7 @@ class CardTableViewCell: UITableViewCell {
             self.ratingLabel.text = movie?.rating
             self.incLabel.text = movie?.summary
             self.illImageView.sd_setImage(with: URL(string: (movie?.images)!))
+            self.setRatingStar(rating: (movie?.rating as! NSString).doubleValue)
         }
     }
     
@@ -45,6 +54,17 @@ class CardTableViewCell: UITableViewCell {
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 1
+        
+        starArray.append(star_1)
+        starArray.append(star_2)
+        starArray.append(star_3)
+        starArray.append(star_4)
+        starArray.append(star_5)
+        
+        for star in starArray {
+            let starView: UIImageView = star 
+            starView.tintColor = DouStarYellow
+        }
     }
     
     public func initialContent(type: String, rate: String, title: String, content: String, image: String) {
@@ -53,6 +73,26 @@ class CardTableViewCell: UITableViewCell {
         self.eventTitle.text = title
         self.incLabel.text = content
         self.illImageView.sd_setImage(with: URL(string: image))
+    }
+    
+    // 计算评分星级
+    public func setRatingStar(rating: Double) {
+        var index: Int = 0
+        var score: Double = rating
+        while index <= 5 {
+            score -= 1.0
+            let starView = starArray[index]
+            if score < 0 {
+                starView.image = UIImage(named: "ca_star_half")
+                break
+            }
+            score -= 1.0
+            if score < 0 {
+                break
+            }
+            starView.image = UIImage(named: "ca_star")
+            index += 1
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
