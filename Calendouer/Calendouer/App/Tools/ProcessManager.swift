@@ -54,18 +54,19 @@ class ProcessManager: NSObject {
             let index = Int(arc4random() % 20)
             var dataDic: [String: String] = [: ]
             dataDic["id"]                   = json["subjects"][index]["id"].stringValue
-            dataDic["images"]               = json["subjects"][index]["images"]["medium"].stringValue
+            dataDic["images"]               = json["subjects"][index]["images"]["large"].stringValue
             dataDic["title"]                = json["subjects"][index]["title"].stringValue
             
-            let getMovieUrl = "https://api.douban.com/v2/movie/\(dataDic["id"]! as String)"
+            let getMovieUrl = "https://api.douban.com/v2/movie/subject/\(dataDic["id"]! as String)"
             Alamofire.request(getMovieUrl).responseJSON(completionHandler: { (response) in
                 let json_movie = JSON(response.result.value!)
-                dataDic["rating"]               = json_movie["rating"]["average"].stringValue
+                dataDic["rating"]               = "\(json_movie["rating"]["average"].floatValue)"
+                dataDic["original_title"]       = json_movie["title"].stringValue
                 dataDic["alt_title"]            = json_movie["alt_title"].stringValue
                 dataDic["summary"]              = json_movie["summary"].stringValue
                 dataDic["mobile_link"]          = json_movie["mobile_link"].stringValue
                 dataDic["alt"]                  = json_movie["alt"].stringValue
-                
+                dataDic["year"]                 = json_movie["year"].stringValue
                 let movie: MovieObject = MovieObject(Dictionary: dataDic)
                 handle(movie)
             })

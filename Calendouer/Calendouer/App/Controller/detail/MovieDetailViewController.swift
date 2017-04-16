@@ -13,6 +13,9 @@ class MovieDetailViewController: UIViewController {
     var tableView: UITableView!
     var bakView: UIView!
     
+    // 电影实例
+    var movie: MovieObject?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialView()
@@ -95,16 +98,19 @@ extension MovieDetailViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: MoviePostTableViewCellId, for: indexPath) as! MoviePostTableViewCell
             cell.selectionStyle = .none
+            cell.movie = self.movie
             return cell
         }
         else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: MovieIntroductionTableViewCellId, for: indexPath) as! MovieIntroductionTableViewCell
             cell.selectionStyle = .none
+            cell.movie = self.movie
             return cell
         }
         else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: MovieSummaryTableViewCellId, for: indexPath) as! MovieSummaryTableViewCell
             cell.selectionStyle = .none
+            cell.movie = self.movie
             return cell
         }
         else {

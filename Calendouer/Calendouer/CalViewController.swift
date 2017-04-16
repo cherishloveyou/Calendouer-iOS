@@ -302,6 +302,8 @@ extension CalViewController: UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: false)
         if cardData[indexPath.row].classForCoder == MovieObject.self {
             let movieDetailVC = MovieDetailViewController()
+            let movie: MovieObject = self.cardData[indexPath.row] as! MovieObject
+            movieDetailVC.movie = movie
             self.navigationController?.pushViewController(movieDetailVC, animated: true)
         }
     }

@@ -13,6 +13,12 @@ class MoviePostTableViewCell: UITableViewCell {
     @IBOutlet weak var bakView: UIView!
     @IBOutlet weak var ablumImage: UIImageView!
     
+    var movie: MovieObject? {
+        didSet {
+            self.ablumImage.sd_setImage(with: URL(string: (movie?.images)!))
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

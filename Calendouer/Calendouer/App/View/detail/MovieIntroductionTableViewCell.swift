@@ -20,8 +20,8 @@ class MovieIntroductionTableViewCell: UITableViewCell {
     var movie: MovieObject? {
         didSet {
             self.titleLabel.text = movie?.title
-            self.officalNameLabel.text = "原名：\(String(describing: movie?.original_title))"
-            self.releaseTimeLabel.text = "上映时间：\(String(describing: movie?.year))"
+            self.officalNameLabel.text = "原名：\(NSString(string: (movie?.title)!))"
+            self.releaseTimeLabel.text = "上映时间：\(NSString(string: (movie?.year)!))"
         }
     }
     
