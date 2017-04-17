@@ -36,7 +36,6 @@
 		D5AF78281E6D2BC7006E63DC /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AF78261E6D2BC7006E63DC /* CardTableViewCell.xib */; };
 		D5AF78581E6E6DF9006E63DC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AF78571E6E6DF9006E63DC /* CoreLocation.framework */; };
 		D5AF785B1E6E9C6D006E63DC /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF785A1E6E9C6D006E63DC /* AnimatedSwitch.swift */; };
-		D5AF78611E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework in Resources */ = {isa = PBXBuildFile; fileRef = D5AF78601E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework */; };
 		D5AF78661E6F8134006E63DC /* ProcessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78651E6F8134006E63DC /* ProcessManager.swift */; };
 		D5AF78681E6FD691006E63DC /* WeatherObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF78671E6FD691006E63DC /* WeatherObject.swift */; };
 		D5CAD9AF1E86CAE600669251 /* MoviePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CAD9AD1E86CAE600669251 /* MoviePostTableViewCell.swift */; };
@@ -53,6 +52,10 @@
 		D5D706C01E68681000F61871 /* AppDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D706BF1E68681000F61871 /* AppDefault.swift */; };
 		D5D706C41E6BAB9000F61871 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D706C31E6BAB9000F61871 /* TabViewController.swift */; };
 		D5D706C61E6CEF0600F61871 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D706C51E6CEF0600F61871 /* SettingViewController.swift */; };
+		D5E3B7511EA4AEC300021D37 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3B74C1EA4ACC600021D37 /* Realm.framework */; };
+		D5E3B7521EA4AEC300021D37 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3B74C1EA4ACC600021D37 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D5E3B7541EA4AEC700021D37 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3B74D1EA4ACC600021D37 /* RealmSwift.framework */; };
+		D5E3B7551EA4AEC700021D37 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3B74D1EA4ACC600021D37 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,18 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5E3B7531EA4AEC300021D37 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D5E3B7551EA4AEC700021D37 /* RealmSwift.framework in Embed Frameworks */,
+				D5E3B7521EA4AEC300021D37 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -125,7 +140,6 @@
 		D5AF782A1E6DAC38006E63DC /* Calendouer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calendouer-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5AF78571E6E6DF9006E63DC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D5AF785A1E6E9C6D006E63DC /* AnimatedSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedSwitch.swift; sourceTree = "<group>"; };
-		D5AF78601E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThinkpageAPI_v_1_0_1.framework; sourceTree = "<group>"; };
 		D5AF78651E6F8134006E63DC /* ProcessManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProcessManager.swift; path = App/Tools/ProcessManager.swift; sourceTree = "<group>"; };
 		D5AF78671E6FD691006E63DC /* WeatherObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherObject.swift; path = App/Model/WeatherObject.swift; sourceTree = "<group>"; };
 		D5CAD9AD1E86CAE600669251 /* MoviePostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviePostTableViewCell.swift; path = App/View/detail/MoviePostTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,6 +162,8 @@
 		D5D706BF1E68681000F61871 /* AppDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDefault.swift; path = Default/AppDefault.swift; sourceTree = "<group>"; };
 		D5D706C31E6BAB9000F61871 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabViewController.swift; path = App/Controller/TabViewController.swift; sourceTree = "<group>"; };
 		D5D706C51E6CEF0600F61871 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = App/Controller/SettingViewController.swift; sourceTree = "<group>"; };
+		D5E3B74C1EA4ACC600021D37 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		D5E3B74D1EA4ACC600021D37 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		D8A08A95730A76A12845FD1F /* Pods-Calendouer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendouer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendouer/Pods-Calendouer.debug.xcconfig"; sourceTree = "<group>"; };
 		DF9CEEE2CC15DEF670F499B5 /* Pods-Calendouer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendouer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendouer/Pods-Calendouer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E3B7511EA4AEC300021D37 /* Realm.framework in Frameworks */,
+				D5E3B7541EA4AEC700021D37 /* RealmSwift.framework in Frameworks */,
 				D5AF78581E6E6DF9006E63DC /* CoreLocation.framework in Frameworks */,
 				D5AF78231E6CF97B006E63DC /* Reveal.framework in Frameworks */,
 				2923B9A515626D8C813579C7 /* Pods_Calendouer.framework in Frameworks */,
@@ -210,7 +228,8 @@
 		B3E5375B9D7F39E38B4D7ADB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D5AF78601E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework */,
+				D5E3B74C1EA4ACC600021D37 /* Realm.framework */,
+				D5E3B74D1EA4ACC600021D37 /* RealmSwift.framework */,
 				D5AF78571E6E6DF9006E63DC /* CoreLocation.framework */,
 				C3B2545464D916F8368106AA /* Pods_Calendouer.framework */,
 				D5AF781F1E6CF698006E63DC /* Reveal.framework */,
@@ -442,6 +461,8 @@
 				6F109DE6EE13848C1643C48B /* [CP] Embed Pods Frameworks */,
 				94FD7D1DD9D146EE5672DE1B /* [CP] Copy Pods Resources */,
 				D573CB291E7597AD00D06407 /* Embed App Extensions */,
+				D5E3B7531EA4AEC300021D37 /* Embed Frameworks */,
+				D5E3B7561EA4AF5D00021D37 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -564,7 +585,6 @@
 				D5CAD9B01E86CAE600669251 /* MoviePostTableViewCell.xib in Resources */,
 				D562899F1E711F220060DDEE /* SwitchSettingTableViewCell.xib in Resources */,
 				D56289A31E712ABF0060DDEE /* TextSettingTableViewCell.xib in Resources */,
-				D5AF78611E6F7B0F006E63DC /* ThinkpageAPI_v_1_0_1.framework in Resources */,
 				D5D706951E68612800F61871 /* Assets.xcassets in Resources */,
 				D5094C801E8B8F230042B60A /* refresh-cal.json in Resources */,
 				D515B4C91E87910200EC7BF9 /* MovieSummaryTableViewCell.xib in Resources */,
@@ -634,6 +654,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		D5E3B7561EA4AF5D00021D37 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -873,6 +906,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"\"$(SRCROOT)\"",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Calendouer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
