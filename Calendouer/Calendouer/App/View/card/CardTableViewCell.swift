@@ -28,12 +28,14 @@ class CardTableViewCell: UITableViewCell {
     
     var movie: MovieObject? {
         didSet {
-            self.eventTitle.text = movie?.title
-            self.cardTitleLabel.text = "每日电影"
-            self.ratingLabel.text = movie?.rating
-            self.incLabel.text = movie?.summary
-            self.illImageView.sd_setImage(with: URL(string: (movie?.images)!))
-            self.setRatingStar(rating: (movie?.rating as! NSString).doubleValue)
+            if let thisMovie = movie {
+                self.eventTitle.text = thisMovie.title
+                self.cardTitleLabel.text = "每日电影"
+                self.ratingLabel.text = thisMovie.rating
+                self.incLabel.text = thisMovie.summary
+                self.illImageView.sd_setImage(with: URL(string: (thisMovie.images)))
+                self.setRatingStar(rating: NSString(string: thisMovie.rating).doubleValue)
+            }
         }
     }
     
@@ -78,20 +80,18 @@ class CardTableViewCell: UITableViewCell {
     // 计算评分星级
     public func setRatingStar(rating: Double) {
         var index: Int = 0
-        var score: Double = rating
-        while index <= 5 {
-            score -= 1.0
+        let score: Double = rating * 10
+        let count: Int = Int(score) / 10
+        let starCnt: Int = count / 2
+        let halfStarCnt: Int = count % 2
+        for _ in 0..<starCnt {
             let starView = starArray[index]
-            if score < 0 {
-                starView.image = UIImage(named: "ca_star_half")
-                break
-            }
-            score -= 1.0
-            if score < 0 {
-                break
-            }
             starView.image = UIImage(named: "ca_star")
             index += 1
+        }
+        if halfStarCnt == 1 {
+            let starView = starArray[index]
+            starView.image = UIImage(named: "ca_star_half")
         }
     }
     

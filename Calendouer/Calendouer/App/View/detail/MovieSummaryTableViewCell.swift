@@ -14,7 +14,9 @@ class MovieSummaryTableViewCell: UITableViewCell {
     
     var movie: MovieObject? {
         didSet {
-            self.contentLabel.text = movie?.summary
+            if let thisMovie = movie {
+                self.contentLabel.text = thisMovie.summary
+            }
         }
     }
 

@@ -26,7 +26,7 @@ class CalViewController: UIViewController {
     
     let monthLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "--"
+        _label.text = " "
         _label.textColor = .white
         _label.textAlignment = .left
         _label.font = DouDefalutFont
@@ -35,7 +35,7 @@ class CalViewController: UIViewController {
     
     let weekdayLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "---"
+        _label.text = " "
         _label.textColor = .white
         _label.textAlignment = .center
         _label.font = DouDefalutFont
@@ -45,7 +45,7 @@ class CalViewController: UIViewController {
     
     let lunarLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "--------"
+        _label.text = " "
         _label.textColor = .white
         _label.textAlignment = .right
         _label.font = DouDefalutFont
@@ -55,7 +55,7 @@ class CalViewController: UIViewController {
     
     let dayLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "0"
+        _label.text = " "
         _label.textColor = .white
         _label.textAlignment = .center
         _label.font = DouCalendarFont
@@ -65,7 +65,7 @@ class CalViewController: UIViewController {
     
     let cityLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "--"
+        _label.text = " "
         _label.textColor = .white
         _label.textAlignment = .right
         _label.font = DouDefalutFont
@@ -74,7 +74,7 @@ class CalViewController: UIViewController {
     
     let updateTimeLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "--"
+        _label.text = " "
         _label.textColor = .white
         _label.textAlignment = .right
         _label.font = DouDefalutFont
@@ -83,7 +83,7 @@ class CalViewController: UIViewController {
     
     let weatherLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "--"
+        _label.text = " "
         _label.textColor = .white
         _label.textAlignment = .left
         _label.font = DouDefalutFont
@@ -92,7 +92,7 @@ class CalViewController: UIViewController {
     
     let degreeLabel: UILabel = {
         let _label: UILabel = UILabel()
-        _label.text = "--"
+        _label.text = " "
         _label.textColor = .white
         _label.textAlignment = .left
         _label.font = DouDefalutFont
