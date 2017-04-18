@@ -1,23 +1,21 @@
 PODS:
   - Alamofire (4.4.0)
-  - lottie-ios (1.0.4)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
-  - SnapKit (3.0.2)
+  - Kingfisher (3.6.2)
+  - lottie-ios (1.5.1)
+  - SnapKit (3.2.0)
   - Spring (1.0.3)
   - SwiftyJSON (3.1.4)
-  - SwipeableTabBarController (1.0.0)
+  - SwipeableTabBarController (1.0.4)
   - TKSwitcherCollection (1.3.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4)
-  - lottie-ios (~> 1.0.4)
-  - SDWebImage (~> 3.8)
-  - SnapKit (~> 3.0.2)
+  - Alamofire
+  - Kingfisher
+  - lottie-ios
+  - SnapKit
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
-  - SwiftyJSON (~> 3.1.4)
-  - SwipeableTabBarController (~> 1.0.0)
+  - SwiftyJSON
+  - SwipeableTabBarController
   - TKSwitcherCollection
 
 EXTERNAL SOURCES:
@@ -27,19 +25,19 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Spring:
-    :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
+    :commit: 8201b5c93bd7ebdf4cd18160bcde1e6e88c2be64
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
-  lottie-ios: 8b2c5ba38105430a72f03ce54be90d8dac950161
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
+  lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  SwipeableTabBarController: fb07f89c9c6dec9af60e546a5e75bd86cbb16e78
+  SwipeableTabBarController: a52688ad47614ba98611df30a788202db90620fe
   TKSwitcherCollection: 939c8a60c47be0db6f0327906456cac855918275
 
-PODFILE CHECKSUM: 69116b8143ff773954323a509ebc697ffb053df5
+PODFILE CHECKSUM: a5d4b79310c23c39ec088d1c2ac79a1c5fdd353b
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

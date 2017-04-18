@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class CardTableViewCell: UITableViewCell {
 
@@ -33,7 +33,7 @@ class CardTableViewCell: UITableViewCell {
                 self.cardTitleLabel.text = "每日电影"
                 self.ratingLabel.text = thisMovie.rating
                 self.incLabel.text = thisMovie.summary
-                self.illImageView.sd_setImage(with: URL(string: (thisMovie.images)))
+                self.illImageView.kf.setImage(with: URL(string: (thisMovie.images)))
                 self.setRatingStar(rating: NSString(string: thisMovie.rating).doubleValue)
             }
         }
@@ -74,7 +74,7 @@ class CardTableViewCell: UITableViewCell {
         self.ratingLabel.text = rate
         self.eventTitle.text = title
         self.incLabel.text = content
-        self.illImageView.sd_setImage(with: URL(string: image))
+        self.illImageView.kf.setImage(with: URL(string: (image)))
     }
     
     // 计算评分星级

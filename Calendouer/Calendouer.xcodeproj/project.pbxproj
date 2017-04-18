@@ -666,7 +666,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D5E3B7561EA4AF5D00021D37 /* ShellScript */ = {
@@ -922,7 +922,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"\"$(SRCROOT)\"",
-					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Calendouer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -934,8 +933,6 @@
 					"$(inherited)",
 					"-framework",
 					"\"Lottie\"",
-					"-framework",
-					"\"SDWebImage\"",
 					"-framework",
 					"\"SnapKit\"",
 					"-framework",
@@ -976,8 +973,6 @@
 					"$(inherited)",
 					"-framework",
 					"\"Lottie\"",
-					"-framework",
-					"\"SDWebImage\"",
 					"-framework",
 					"\"SnapKit\"",
 					"-framework",

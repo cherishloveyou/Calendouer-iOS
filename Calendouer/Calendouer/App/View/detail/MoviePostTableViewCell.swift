@@ -16,7 +16,7 @@ class MoviePostTableViewCell: UITableViewCell {
     var movie: MovieObject? {
         didSet {
             if let thisMovie = movie {
-                self.ablumImage.sd_setImage(with: URL(string: thisMovie.images))
+                self.ablumImage.kf.setImage(with: URL(string: thisMovie.images))
             }
         }
     }

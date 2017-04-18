@@ -15,9 +15,9 @@ class AnimationTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        let animationView = LOTAnimationView.animationNamed("refresh-cal.json")
-        animationView?.frame = view.bounds;
-        animationView?.loopAnimation = true;
+        let animationView = LOTAnimationView(name: "refresh-cal.json")
+        animationView?.frame = view.bounds
+        animationView?.loopAnimation = true
         self.view.addSubview(animationView!)
         animationView?.play(completion: { finished in
             print("hello world")

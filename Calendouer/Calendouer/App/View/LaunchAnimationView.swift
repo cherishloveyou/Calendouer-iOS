@@ -32,7 +32,7 @@ class LaunchAnimationView: UIView {
     }()
     
     let animationView: LOTAnimationView = {
-        let animation = LOTAnimationView.animationNamed("refresh-cal.json")
+        let animation = LOTAnimationView(name: "refresh-cal.json")
         return animation!
     }()
     
