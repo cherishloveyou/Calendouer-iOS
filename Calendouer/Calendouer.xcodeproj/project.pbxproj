@@ -56,6 +56,8 @@
 		D5E3B7521EA4AEC300021D37 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3B74C1EA4ACC600021D37 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5E3B7541EA4AEC700021D37 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3B74D1EA4ACC600021D37 /* RealmSwift.framework */; };
 		D5E3B7551EA4AEC700021D37 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5E3B74D1EA4ACC600021D37 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D5E3B7591EA5C6EC00021D37 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3B7581EA5C6EC00021D37 /* MovieData.swift */; };
+		D5E3B75B1EA5D1E600021D37 /* LaunchAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E3B75A1EA5D1E600021D37 /* LaunchAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +166,8 @@
 		D5D706C51E6CEF0600F61871 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = App/Controller/SettingViewController.swift; sourceTree = "<group>"; };
 		D5E3B74C1EA4ACC600021D37 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		D5E3B74D1EA4ACC600021D37 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		D5E3B7581EA5C6EC00021D37 /* MovieData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieData.swift; path = App/Database/MovieData.swift; sourceTree = "<group>"; };
+		D5E3B75A1EA5D1E600021D37 /* LaunchAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaunchAnimationView.swift; path = App/View/LaunchAnimationView.swift; sourceTree = "<group>"; };
 		D8A08A95730A76A12845FD1F /* Pods-Calendouer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendouer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calendouer/Pods-Calendouer.debug.xcconfig"; sourceTree = "<group>"; };
 		DF9CEEE2CC15DEF670F499B5 /* Pods-Calendouer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calendouer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calendouer/Pods-Calendouer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -299,8 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				D5AF785A1E6E9C6D006E63DC /* AnimatedSwitch.swift */,
-				D573CB2E1E76828900D06407 /* PreferenceManager.swift */,
 				D5AF78651E6F8134006E63DC /* ProcessManager.swift */,
+				D573CB2E1E76828900D06407 /* PreferenceManager.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -389,6 +393,7 @@
 				D562899B1E70E06F0060DDEE /* setting */,
 				D5AF78241E6D2B72006E63DC /* card */,
 				D5D706911E68612800F61871 /* Main.storyboard */,
+				D5E3B75A1EA5D1E600021D37 /* LaunchAnimationView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -422,12 +427,21 @@
 		D5D706C11E68684F00F61871 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D5E3B7571EA5C62800021D37 /* Database */,
 				D5AF78591E6E9C60006E63DC /* Tools */,
 				D5D706BD1E6867A700F61871 /* Model */,
 				D5D706BC1E68679F00F61871 /* View */,
 				D5D706BB1E68678A00F61871 /* Controller */,
 			);
 			name = App;
+			sourceTree = "<group>";
+		};
+		D5E3B7571EA5C62800021D37 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D5E3B7581EA5C6EC00021D37 /* MovieData.swift */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -689,6 +703,7 @@
 				D515B4C81E87910200EC7BF9 /* MovieSummaryTableViewCell.swift in Sources */,
 				D5110D261E72A633006188DB /* AppStatic.swift in Sources */,
 				D5D706C61E6CEF0600F61871 /* SettingViewController.swift in Sources */,
+				D5E3B7591EA5C6EC00021D37 /* MovieData.swift in Sources */,
 				D51343AF1E851BBD003EE79B /* MovieDetailViewController.swift in Sources */,
 				D56289A21E712ABF0060DDEE /* TextSettingTableViewCell.swift in Sources */,
 				D573CB311E768B9900D06407 /* UserInfo.swift in Sources */,
@@ -698,6 +713,7 @@
 				D5AF78681E6FD691006E63DC /* WeatherObject.swift in Sources */,
 				D5AF78271E6D2BC7006E63DC /* CardTableViewCell.swift in Sources */,
 				D5D706C41E6BAB9000F61871 /* TabViewController.swift in Sources */,
+				D5E3B75B1EA5D1E600021D37 /* LaunchAnimationView.swift in Sources */,
 				D5110D241E723B6C006188DB /* DayObject.swift in Sources */,
 				D5D706901E68612800F61871 /* CalViewController.swift in Sources */,
 				D573CB2F1E76828900D06407 /* PreferenceManager.swift in Sources */,

@@ -126,6 +126,10 @@ class CalViewController: UIViewController {
         setupData()
     }
     
+    // User Default
+    let Preferences = PreferenceManager.shared
+    var userInfo: UserInfo = UserInfo()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
@@ -171,6 +175,10 @@ class CalViewController: UIViewController {
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        // Userdefault
+        let userInfo: UserInfo = Preferences[.userInfo]!
+        self.userInfo = userInfo
         
         self.tabBarController?.tabBar.barTintColor = UIColor.white
         
@@ -337,6 +345,24 @@ extension CalViewController: CLLocationManagerDelegate {
                         // 暂时更改 UI 方法
                         // TODO: 通用方法修改视图回调接口
                         self.cityLabel.changeText(data: city.locality!)
+                        
+                        // 根据时间缓存判断是否更新天气
+                        let last = self.userInfo.timestamp
+                        let now = Int(Date().timeIntervalSince1970)
+                        print ("Now: \(now) Last: \(last)")
+                        
+                        if last > 0 {
+                            // 暂时设置为 10 分钟
+                            if now - last < 600 && self.userInfo.weatherMsg.count == 4{
+                                print ("无需更新")
+                                self.degreeLabel.text = self.userInfo.weatherMsg[0]
+                                self.weatherLabel.text = self.userInfo.weatherMsg[1]
+                                self.updateTimeLabel.text = self.userInfo.weatherMsg[2]
+                                self.weatherImageView.image = UIImage(named: self.userInfo.weatherMsg[3])
+                                return
+                            }
+                        }
+                        
                         let la = currentLocation.coordinate.latitude
                         let lo = currentLocation.coordinate.longitude
                         self.process.GetWeather(Switch: true, latitude: CGFloat(la), longitude: CGFloat(lo), handle: { (weather) in
@@ -344,6 +370,15 @@ extension CalViewController: CLLocationManagerDelegate {
                             self.weatherLabel.changeText(data: "\(weather.text_day)，\(weather.text_night)")
                             self.updateTimeLabel.changeText(data: "更新：\(weather.last_update)")
                             self.weatherImageView.image = UIImage(named: weather.getWeatherIcon())
+                            let weatherMsgs: Array<String> = [
+                                "\(weather.low)°C | \(weather.high)°C",
+                                "\(weather.text_day)，\(weather.text_night)",
+                                "更新：\(weather.last_update)",
+                                weather.getWeatherIcon(),
+                            ]
+                            self.userInfo.timestamp = now
+                            self.userInfo.weatherMsg = weatherMsgs
+                            self.Preferences[.userInfo] = self.userInfo
                         })
                     }
                 }

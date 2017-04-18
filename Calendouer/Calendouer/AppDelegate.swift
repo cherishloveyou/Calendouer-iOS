@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let navbarFont = UIFont(name: "Ubuntu", size: 17) ?? UIFont.systemFont(ofSize: 17)
         let barbuttonFont = UIFont(name: "Ubuntu-Light", size: 15) ?? UIFont.systemFont(ofSize: 15)
@@ -25,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: barbuttonFont, NSForegroundColorAttributeName: UIColor.white], for: UIControlState.normal)
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().shadowImage = UIImage()
+        
+        window?.makeKeyAndVisible()
+        let launchAnimation = LaunchAnimationView()
+        self.window?.addSubview(launchAnimation)
+        launchAnimation.animationBegin()
         
         return true
     }

@@ -10,10 +10,19 @@ import Foundation
 import RealmSwift
 
 class MovieData: Object {
+    dynamic var id = 0
+    dynamic var title = ""
+    dynamic var rating = ""
+    dynamic var year = ""
+    dynamic var images = ""
+    dynamic var summary = ""
+    dynamic var original_title = ""
+    dynamic var genres = ""
+    dynamic var director = ""
     
-// Specify properties to ignore (Realm won't persist these)
+    dynamic var appearDay: NSDate? = nil
     
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

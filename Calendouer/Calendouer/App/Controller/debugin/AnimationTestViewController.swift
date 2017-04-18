@@ -23,6 +23,8 @@ class AnimationTestViewController: UIViewController {
             print("hello world")
         })
         
+        UIView.animate(withDuration: 8) {
+            animationView?.alpha = 0
+        }
     }
-
 }
